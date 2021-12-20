@@ -4,12 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AmountViewController" customModule="Fight_with_daemon" customModuleProvider="target">
             <connections>
+                <outlet property="amountTextField" destination="tbb-ir-v52" id="7mZ-X6-eGV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +17,38 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-ir-v52">
+                    <rect key="frame" x="20" y="144" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2OY-fM-IBx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-zV-abO">
+                    <rect key="frame" x="172" y="230" width="70" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5Z6-7f-1RF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                    <connections>
+                        <action selector="submitBtnTapped:" destination="-1" eventType="touchUpInside" id="sas-Ia-OIl"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemPinkColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tbb-ir-v52" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="VkH-PK-AWP"/>
+                <constraint firstItem="tbb-ir-v52" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="X0X-aD-O6b"/>
+                <constraint firstItem="g9A-zV-abO" firstAttribute="centerX" secondItem="tbb-ir-v52" secondAttribute="centerX" id="dkj-Rp-vxg"/>
+                <constraint firstItem="tbb-ir-v52" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gwk-dN-wCM"/>
+                <constraint firstItem="g9A-zV-abO" firstAttribute="top" secondItem="tbb-ir-v52" secondAttribute="bottom" constant="36" id="rFJ-Jr-6ld"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tbb-ir-v52" secondAttribute="trailing" constant="20" id="wnv-qB-q2J"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="112"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

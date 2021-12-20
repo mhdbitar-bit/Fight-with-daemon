@@ -8,9 +8,16 @@
 import UIKit
 
 final class AmountViewController: UIViewController {
-
+    
+    @IBOutlet weak var amountTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "Amount"
+    }
+    
+    @IBAction func submitBtnTapped(_ sender: UIButton) {
+        
     }
 }

@@ -14,14 +14,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        let navigationController = UINavigationController()
+        navigationController.setViewControllers([makeAmountViewController()], animated: false)
+        
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = makeRootViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
-    private func makeRootViewController() -> AmountViewController {
+    private func makeAmountViewController() -> AmountViewController {
         let vc = AmountViewController()
-        vc.navigationController?.title = "Amout"
         return vc
     }
 }
