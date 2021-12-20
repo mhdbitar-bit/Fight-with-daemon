@@ -13,6 +13,7 @@
 		4CDB8ED92770F5BA009489A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED72770F5BA009489A5 /* LaunchScreen.storyboard */; };
 		4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */; };
 		4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */; };
+		4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE427710166009489A5 /* AmountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4CDB8EDA2770F5BA009489A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
 		4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountViewController.xib; sourceTree = "<group>"; };
+		4CDB8EE427710166009489A5 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
 				4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */,
 				4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */,
+				4CDB8EE427710166009489A5 /* AmountViewModel.swift */,
 			);
 			path = "Fight with daemon";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */,

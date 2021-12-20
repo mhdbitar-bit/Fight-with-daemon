@@ -11,10 +11,17 @@ final class AmountViewController: UIViewController {
     
     @IBOutlet weak var amountTextField: UITextField!
     
+    var viewModel: AmountViewModel!
+    
+    convenience init(viewModel: AmountViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Amount"
+        self.title = viewModel.title
     }
     
     @IBAction func submitBtnTapped(_ sender: UIButton) {
