@@ -14,6 +14,7 @@
 		4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */; };
 		4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */; };
 		4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE427710166009489A5 /* AmountViewModel.swift */; };
+		4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
 		4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountViewController.xib; sourceTree = "<group>"; };
 		4CDB8EE427710166009489A5 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
+		4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4CDB8ECB2770F5B9009489A5 /* Fight with daemon */ = {
 			isa = PBXGroup;
 			children = (
+				4CDB8EE627710284009489A5 /* Extensions */,
 				4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */,
 				4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */,
 				4CDB8ED52770F5BA009489A5 /* Assets.xcassets */,
@@ -68,6 +71,14 @@
 				4CDB8EE427710166009489A5 /* AmountViewModel.swift */,
 			);
 			path = "Fight with daemon";
+			sourceTree = "<group>";
+		};
+		4CDB8EE627710284009489A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
+				4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */,
 				4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
