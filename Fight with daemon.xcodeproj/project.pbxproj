@@ -16,6 +16,7 @@
 		4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE427710166009489A5 /* AmountViewModel.swift */; };
 		4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */; };
 		4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */; };
+		4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EED27710445009489A5 /* Alertable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4CDB8EE427710166009489A5 /* AmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewModel.swift; sourceTree = "<group>"; };
 		4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
 		4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extesnion.swift"; sourceTree = "<group>"; };
+		4CDB8EED27710445009489A5 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 		4CDB8ECB2770F5B9009489A5 /* Fight with daemon */ = {
 			isa = PBXGroup;
 			children = (
-				4CDB8EE627710284009489A5 /* Extensions */,
+				4CDB8EEB27710427009489A5 /* Utils */,
 				4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */,
 				4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */,
 				4CDB8ED52770F5BA009489A5 /* Assets.xcassets */,
@@ -82,6 +84,23 @@
 				4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4CDB8EEB27710427009489A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EEC27710438009489A5 /* Protocols */,
+				4CDB8EE627710284009489A5 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4CDB8EEC27710438009489A5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EED27710445009489A5 /* Alertable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
+				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */,
