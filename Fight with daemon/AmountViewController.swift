@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AmountViewController.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/20/21.
@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class AmountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
 }
-
