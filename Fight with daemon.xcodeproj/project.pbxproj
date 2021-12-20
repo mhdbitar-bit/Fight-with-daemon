@@ -17,6 +17,7 @@
 		4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */; };
 		4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */; };
 		4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EED27710445009489A5 /* Alertable.swift */; };
+		4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EF8277106CD009489A5 /* Lodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
 		4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extesnion.swift"; sourceTree = "<group>"; };
 		4CDB8EED27710445009489A5 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		4CDB8EF8277106CD009489A5 /* Lodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				4CDB8EEF277104ED009489A5 /* Presentations */,
 				4CDB8EF427710527009489A5 /* Application */,
+				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
 				4CDB8EF72771055C009489A5 /* Resources */,
 			);
 			path = "Fight with daemon";
@@ -93,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDB8EED27710445009489A5 /* Alertable.swift */,
+				4CDB8EF8277106CD009489A5 /* Lodable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -144,7 +148,6 @@
 		4CDB8EF427710527009489A5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
 				4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */,
 				4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */,
 			);
@@ -249,6 +252,7 @@
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
+				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */,
 				4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */,

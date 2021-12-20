@@ -8,11 +8,13 @@
 import UIKit
 import Combine
 
-final class AmountViewController: UIViewController, Alertable {
+final class AmountViewController: UIViewController, Alertable, Lodable {
     
     @IBOutlet weak var amountTextField: UITextField!
     
     var viewModel: AmountViewModel!
+    var activityIndicator = UIActivityIndicatorView()
+    
     
     convenience init(viewModel: AmountViewModel) {
         self.init()
@@ -26,6 +28,5 @@ final class AmountViewController: UIViewController, Alertable {
     }
     
     @IBAction func submitBtnTapped(_ sender: UIButton) {
-        
     }
 }

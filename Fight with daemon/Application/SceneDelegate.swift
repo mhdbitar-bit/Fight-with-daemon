@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeAmountViewController() -> AmountViewController {
-        let vc = AmountViewController()
+        let viewModel = AmountViewModel()
+        let vc = AmountViewController(viewModel: viewModel)
         return vc
     }
 }

@@ -11,4 +11,8 @@ import Combine
 final class AmountViewModel {
     
     let title: String = "Amount"
+    
+    func validate() {
+        
+    }
 }
