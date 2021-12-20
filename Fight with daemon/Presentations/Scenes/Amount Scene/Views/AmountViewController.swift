@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class AmountViewController: UIViewController {
+final class AmountViewController: UIViewController, Alertable {
     
     @IBOutlet weak var amountTextField: UITextField!
     

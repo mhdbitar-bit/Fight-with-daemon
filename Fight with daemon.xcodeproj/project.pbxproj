@@ -64,15 +64,9 @@
 		4CDB8ECB2770F5B9009489A5 /* Fight with daemon */ = {
 			isa = PBXGroup;
 			children = (
-				4CDB8EEB27710427009489A5 /* Utils */,
-				4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */,
-				4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */,
-				4CDB8ED52770F5BA009489A5 /* Assets.xcassets */,
-				4CDB8ED72770F5BA009489A5 /* LaunchScreen.storyboard */,
-				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
-				4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */,
-				4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */,
-				4CDB8EE427710166009489A5 /* AmountViewModel.swift */,
+				4CDB8EEF277104ED009489A5 /* Presentations */,
+				4CDB8EF427710527009489A5 /* Application */,
+				4CDB8EF72771055C009489A5 /* Resources */,
 			);
 			path = "Fight with daemon";
 			sourceTree = "<group>";
@@ -101,6 +95,84 @@
 				4CDB8EED27710445009489A5 /* Alertable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4CDB8EEF277104ED009489A5 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EF32771051E009489A5 /* Scenes */,
+				4CDB8EEB27710427009489A5 /* Utils */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		4CDB8EF0277104FC009489A5 /* Amount Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EF22771050D009489A5 /* Views */,
+				4CDB8EF127710505009489A5 /* ViewModel */,
+			);
+			path = "Amount Scene";
+			sourceTree = "<group>";
+		};
+		4CDB8EF127710505009489A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EE427710166009489A5 /* AmountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CDB8EF22771050D009489A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EE02770FC3C009489A5 /* AmountViewController.swift */,
+				4CDB8EE12770FC3C009489A5 /* AmountViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CDB8EF32771051E009489A5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EF527710539009489A5 /* LunchScene */,
+				4CDB8EF0277104FC009489A5 /* Amount Scene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4CDB8EF427710527009489A5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
+				4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */,
+				4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4CDB8EF527710539009489A5 /* LunchScene */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8EF627710546009489A5 /* View */,
+			);
+			path = LunchScene;
+			sourceTree = "<group>";
+		};
+		4CDB8EF627710546009489A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8ED72770F5BA009489A5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CDB8EF72771055C009489A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CDB8ED52770F5BA009489A5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
