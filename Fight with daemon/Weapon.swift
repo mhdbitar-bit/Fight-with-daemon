@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum PowerType {
-    case Water
-    case Fire
-    case Thunder
-    case Ice
-}
-
 struct Weapon {
     let price: Int
 }
