@@ -12,9 +12,18 @@ final class GamePreprationViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var viewModel: GamePreperationViewModel!
+    
+    convenience init(viewModel: GamePreperationViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = viewModel.title
+        
         collectionView.dataSource = self
         collectionView.delegate = self
     }

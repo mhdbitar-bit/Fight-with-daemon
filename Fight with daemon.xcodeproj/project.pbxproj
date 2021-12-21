@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE4277235F000CE1CFF /* GamePreprationViewController.swift */; };
 		4C184FE7277235F000CE1CFF /* GamePreprationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C184FE5277235F000CE1CFF /* GamePreprationViewController.xib */; };
+		4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		4C184FE4277235F000CE1CFF /* GamePreprationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreprationViewController.swift; sourceTree = "<group>"; };
 		4C184FE5277235F000CE1CFF /* GamePreprationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamePreprationViewController.xib; sourceTree = "<group>"; };
+		4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreperationViewModel.swift; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		4C184FE3277235CF00CE1CFF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				4CDB8F052771113B009489A5 /* ThunderWeapon.swift in Sources */,
 				4CDB8F01277110FB009489A5 /* WaterWeapon.swift in Sources */,
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
+				4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */,
 				4CDB8EFF277110AF009489A5 /* Weapon.swift in Sources */,
