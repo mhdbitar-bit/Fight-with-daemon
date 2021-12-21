@@ -12,4 +12,3 @@ public struct WeaponModel: Equatable {
     let price: Int
     let image: String
 }
-

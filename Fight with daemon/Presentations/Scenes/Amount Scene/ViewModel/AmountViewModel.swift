@@ -11,8 +11,9 @@ import Combine
 final class AmountViewModel {
     
     let title: String = "Amount"
+    @Published var amount: String = ""
     
-    func validate() {
-        
-    }
+    private(set) lazy var isInputValid = $amount
+        .map { !$0.isEmpty && $0 != "0" }
+        .eraseToAnyPublisher()
 }

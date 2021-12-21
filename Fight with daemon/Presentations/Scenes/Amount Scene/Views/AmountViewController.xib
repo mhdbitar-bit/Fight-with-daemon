@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AmountViewController" customModule="Fight_with_daemon" customModuleProvider="target">
             <connections>
                 <outlet property="amountTextField" destination="tbb-ir-v52" id="7mZ-X6-eGV"/>
+                <outlet property="submitButton" destination="g9A-zV-abO" id="9cg-X2-6MT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,9 +25,9 @@
                         <constraint firstAttribute="height" constant="50" id="2OY-fM-IBx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-zV-abO">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-zV-abO">
                     <rect key="frame" x="172" y="230" width="70" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5Z6-7f-1RF"/>
