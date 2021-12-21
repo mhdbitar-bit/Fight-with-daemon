@@ -24,20 +24,49 @@ final class GamePreprationViewController: UIViewController {
 
         self.title = viewModel.title
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        setupCollectionView()
     }
 
+    private func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(
+            WeaponCollectionViewCell.nib,
+            forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier
+        )
+        collectionView.reloadData()
+    }
 }
 
 extension GamePreprationViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return viewModel.weapons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeaponCollectionViewCell.identifier, for: indexPath) as? WeaponCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.weapon = viewModel.weapons[indexPath.row].createWeapon()
+        return cell
+    }
+}
+
+extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat = 20
+        let width = (collectionView.frame.size.width - padding) / 2
+        return CGSize(width: width, height: width)
     }
 }
 

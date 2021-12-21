@@ -10,4 +10,9 @@ import Combine
 
 final class GamePreperationViewModel {
     let title: String = "Game Preperation"
+    
+    var weapons: [WeaponFactory] = [WaterWeapon(),
+                                    FireWeapon(),
+                                    ThunderWeapon(),
+                                    IceWeapon()]
 }

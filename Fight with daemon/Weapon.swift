@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Weapon {
+struct Weapon: Equatable {
+    let name: String
     let price: Int
+    let image: String
 }
 

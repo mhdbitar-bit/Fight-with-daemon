@@ -10,6 +10,6 @@ import Foundation
 class ThunderWeapon: WeaponFactory {
     
     func createWeapon() -> Weapon {
-        return Weapon(price: 3)
+        return Weapon(name: "Thunder", price: 3, image: "thunder-gun")
     }
 }

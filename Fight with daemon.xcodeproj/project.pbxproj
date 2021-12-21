@@ -10,6 +10,10 @@
 		4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE4277235F000CE1CFF /* GamePreprationViewController.swift */; };
 		4C184FE7277235F000CE1CFF /* GamePreprationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C184FE5277235F000CE1CFF /* GamePreprationViewController.xib */; };
 		4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */; };
+		4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FEA27723B7700CE1CFF /* WeaponCollectionViewCell.swift */; };
+		4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C184FEB27723B7700CE1CFF /* WeaponCollectionViewCell.xib */; };
+		4C184FEF27723D3800CE1CFF /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FEE27723D3800CE1CFF /* UICollectionView+Extension.swift */; };
+		4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF02772475C00CE1CFF /* UIView+Extension.swift */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 		4C184FE4277235F000CE1CFF /* GamePreprationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreprationViewController.swift; sourceTree = "<group>"; };
 		4C184FE5277235F000CE1CFF /* GamePreprationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamePreprationViewController.xib; sourceTree = "<group>"; };
 		4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreperationViewModel.swift; sourceTree = "<group>"; };
+		4C184FEA27723B7700CE1CFF /* WeaponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C184FEB27723B7700CE1CFF /* WeaponCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponCollectionViewCell.xib; sourceTree = "<group>"; };
+		4C184FEE27723D3800CE1CFF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		4C184FF02772475C00CE1CFF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +87,8 @@
 			children = (
 				4C184FE4277235F000CE1CFF /* GamePreprationViewController.swift */,
 				4C184FE5277235F000CE1CFF /* GamePreprationViewController.xib */,
+				4C184FEA27723B7700CE1CFF /* WeaponCollectionViewCell.swift */,
+				4C184FEB27723B7700CE1CFF /* WeaponCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +139,8 @@
 			children = (
 				4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */,
 				4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */,
+				4C184FEE27723D3800CE1CFF /* UICollectionView+Extension.swift */,
+				4C184FF02772475C00CE1CFF /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +301,7 @@
 			files = (
 				4C184FE7277235F000CE1CFF /* GamePreprationViewController.xib in Resources */,
 				4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */,
+				4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */,
 				4CDB8ED92770F5BA009489A5 /* LaunchScreen.storyboard in Resources */,
 				4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */,
 			);
@@ -301,7 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C184FEF27723D3800CE1CFF /* UICollectionView+Extension.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
+				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
 				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
 				4CDB8F07277111B0009489A5 /* IceWeapon.swift in Sources */,
@@ -311,6 +326,7 @@
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
 				4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
+				4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */,
 				4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */,
 				4CDB8EFF277110AF009489A5 /* Weapon.swift in Sources */,
 				4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */,
@@ -455,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZUTM2D9M6W;
@@ -471,6 +488,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitar.Fight-with-daemon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -482,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZUTM2D9M6W;
@@ -498,6 +517,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitar.Fight-with-daemon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

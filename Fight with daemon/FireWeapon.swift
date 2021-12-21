@@ -9,6 +9,6 @@ import Foundation
 
 class FireWeapon: WeaponFactory {
     func createWeapon() -> Weapon {
-        return Weapon(price: 1)
+        return Weapon(name: "Fire", price: 1, image: "fire-gun")
     }
 }
