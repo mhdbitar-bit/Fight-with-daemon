@@ -7,9 +7,12 @@
 
 import Foundation
 
-class WaterWeapon: WeaponFactory {
+final class WaterWeapon: Weapon {
     
-    func createWeapon() -> Weapon {
-        return Weapon(name: "Water", price: 2, image: "water-gun")
+    internal var weapon: WeaponModel?
+    
+    func createWeapon() -> WeaponModel {
+        weapon = WeaponModel(name: "Water", price: 2, image: "water-gun")
+        return weapon!
     }
 }

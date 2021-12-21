@@ -25,8 +25,8 @@
 		4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */; };
 		4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EED27710445009489A5 /* Alertable.swift */; };
 		4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EF8277106CD009489A5 /* Lodable.swift */; };
-		4CDB8EFC27711069009489A5 /* WeaponFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EFB27711069009489A5 /* WeaponFactory.swift */; };
-		4CDB8EFF277110AF009489A5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EFE277110AF009489A5 /* Weapon.swift */; };
+		4CDB8EFC27711069009489A5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EFB27711069009489A5 /* Weapon.swift */; };
+		4CDB8EFF277110AF009489A5 /* WeaponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EFE277110AF009489A5 /* WeaponModel.swift */; };
 		4CDB8F01277110FB009489A5 /* WaterWeapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8F00277110FB009489A5 /* WaterWeapon.swift */; };
 		4CDB8F0327711121009489A5 /* FireWeapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8F0227711121009489A5 /* FireWeapon.swift */; };
 		4CDB8F052771113B009489A5 /* ThunderWeapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8F042771113B009489A5 /* ThunderWeapon.swift */; };
@@ -54,8 +54,8 @@
 		4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extesnion.swift"; sourceTree = "<group>"; };
 		4CDB8EED27710445009489A5 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4CDB8EF8277106CD009489A5 /* Lodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
-		4CDB8EFB27711069009489A5 /* WeaponFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponFactory.swift; sourceTree = "<group>"; };
-		4CDB8EFE277110AF009489A5 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		4CDB8EFB27711069009489A5 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		4CDB8EFE277110AF009489A5 /* WeaponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponModel.swift; sourceTree = "<group>"; };
 		4CDB8F00277110FB009489A5 /* WaterWeapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWeapon.swift; sourceTree = "<group>"; };
 		4CDB8F0227711121009489A5 /* FireWeapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireWeapon.swift; sourceTree = "<group>"; };
 		4CDB8F042771113B009489A5 /* ThunderWeapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunderWeapon.swift; sourceTree = "<group>"; };
@@ -120,12 +120,12 @@
 		4CDB8ECB2770F5B9009489A5 /* Fight with daemon */ = {
 			isa = PBXGroup;
 			children = (
-				4CDB8EFB27711069009489A5 /* WeaponFactory.swift */,
+				4CDB8EFB27711069009489A5 /* Weapon.swift */,
 				4CDB8F00277110FB009489A5 /* WaterWeapon.swift */,
 				4CDB8F042771113B009489A5 /* ThunderWeapon.swift */,
 				4CDB8F0227711121009489A5 /* FireWeapon.swift */,
 				4CDB8F06277111B0009489A5 /* IceWeapon.swift */,
-				4CDB8EFE277110AF009489A5 /* Weapon.swift */,
+				4CDB8EFE277110AF009489A5 /* WeaponModel.swift */,
 				4CDB8EEF277104ED009489A5 /* Presentations */,
 				4CDB8EF427710527009489A5 /* Application */,
 				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
@@ -328,11 +328,11 @@
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */,
 				4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */,
-				4CDB8EFF277110AF009489A5 /* Weapon.swift in Sources */,
+				4CDB8EFF277110AF009489A5 /* WeaponModel.swift in Sources */,
 				4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */,
 				4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */,
 				4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */,
-				4CDB8EFC27711069009489A5 /* WeaponFactory.swift in Sources */,
+				4CDB8EFC27711069009489A5 /* Weapon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

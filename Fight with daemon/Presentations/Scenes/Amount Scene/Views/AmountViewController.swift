@@ -28,7 +28,7 @@ final class AmountViewController: UIViewController, Alertable, Lodable {
     }
     
     @IBAction func submitBtnTapped(_ sender: UIButton) {
-        let gamePreperationViewModel = GamePreperationViewModel()
+        let gamePreperationViewModel = GamePreperationViewModel(amount: 0)
         let vc = GamePreprationViewController(viewModel: gamePreperationViewModel)
         self.show(vc, sender: self)
     }

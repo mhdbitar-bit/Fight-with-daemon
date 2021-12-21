@@ -18,7 +18,7 @@ class WeaponCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var weaponNameLabel: UILabel!
     @IBOutlet weak var weaponPriceLabel: UILabel!
     
-    var weapon: Weapon! {
+    var weapon: WeaponModel! {
         didSet {
             weaponNameLabel.text = weapon.name
             weaponPriceLabel.text = "Price: \(weapon.price)"
