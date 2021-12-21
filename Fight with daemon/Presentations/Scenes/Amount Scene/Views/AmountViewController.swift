@@ -29,19 +29,27 @@ final class AmountViewController: UIViewController, Alertable, Lodable {
         
         self.title = viewModel.title
         
-        amountTextField.textPublisher
-            .receive(on: DispatchQueue.main)
-            .assign(to: \.amount, on: viewModel)
-            .store(in: &bindings)
+        bindTextField()
         
-        viewModel.isInputValid
-            .receive(on: RunLoop.main)
-            .assign(to: \.isValid, on: submitButton)
-            .store(in: &bindings)
+        bindValidation()
     }
     
     @IBAction func submitBtnTapped(_ sender: UIButton) {
         goToGamePreperationPage()
+    }
+    
+    private func bindTextField() {
+        amountTextField.textPublisher
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.amount, on: viewModel)
+            .store(in: &bindings)
+    }
+    
+    private func bindValidation() {
+        viewModel.isInputValid
+            .receive(on: RunLoop.main)
+            .assign(to: \.isValid, on: submitButton)
+            .store(in: &bindings)
     }
     
     private func goToGamePreperationPage() {
