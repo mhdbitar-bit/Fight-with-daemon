@@ -12,19 +12,22 @@ final class GamePreperationViewModel {
     let title: String = "Game Preperation"
     
     var amount: Int
-    var weapons: [Weapon] = [WaterWeapon(),
-                                    FireWeapon(),
-                                    ThunderWeapon(),
-                                    IceWeapon()]
+    var weapons: [Weapon] = [
+        WaterWeapon(),
+        FireWeapon(),
+        ThunderWeapon(),
+        IceWeapon()
+    ]
+    
+    private var selectedWeapons: [Weapon] = []
     
     init(amount: Int) {
         self.amount = amount
     }
     
-    var selectedWeapons: [Weapon] = []
-    
-    func setWeapon(index: Int) {
-//        if amount > 0 && weapons[index] {
-//        }
+    func selectWeapon(index: Int) {
+        if amount > 0 && weapons[index].getPrice() >= amount {
+            selectedWeapons.append(weapons[index])
+        }
     }
 }

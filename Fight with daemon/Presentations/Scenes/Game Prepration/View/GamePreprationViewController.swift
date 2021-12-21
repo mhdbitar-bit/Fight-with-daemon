@@ -34,6 +34,7 @@ final class GamePreprationViewController: UIViewController {
             WeaponCollectionViewCell.nib,
             forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier
         )
+        collectionView.allowsMultipleSelection = true
         collectionView.reloadData()
     }
 }
@@ -72,7 +73,6 @@ extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
 
 extension GamePreprationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: false)
-        print(viewModel.weapons[indexPath.row].getPrice())
+        viewModel.selectWeapon(index: indexPath.row)
     }
 }

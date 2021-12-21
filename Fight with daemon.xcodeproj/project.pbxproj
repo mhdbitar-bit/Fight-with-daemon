@@ -12,8 +12,9 @@
 		4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */; };
 		4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FEA27723B7700CE1CFF /* WeaponCollectionViewCell.swift */; };
 		4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C184FEB27723B7700CE1CFF /* WeaponCollectionViewCell.xib */; };
-		4C184FEF27723D3800CE1CFF /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FEE27723D3800CE1CFF /* UICollectionView+Extension.swift */; };
+		4C184FEF27723D3800CE1CFF /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FEE27723D3800CE1CFF /* UICollectionViewCell+Extension.swift */; };
 		4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF02772475C00CE1CFF /* UIView+Extension.swift */; };
+		4C184FF327726A7700CE1CFF /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -39,8 +40,9 @@
 		4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreperationViewModel.swift; sourceTree = "<group>"; };
 		4C184FEA27723B7700CE1CFF /* WeaponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C184FEB27723B7700CE1CFF /* WeaponCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponCollectionViewCell.xib; sourceTree = "<group>"; };
-		4C184FEE27723D3800CE1CFF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		4C184FEE27723D3800CE1CFF /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		4C184FF02772475C00CE1CFF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,8 +141,9 @@
 			children = (
 				4CDB8EE72771029B009489A5 /* UITextField+Publisher.swift */,
 				4CDB8EE927710346009489A5 /* UIButton+Extesnion.swift */,
-				4C184FEE27723D3800CE1CFF /* UICollectionView+Extension.swift */,
+				4C184FEE27723D3800CE1CFF /* UICollectionViewCell+Extension.swift */,
 				4C184FF02772475C00CE1CFF /* UIView+Extension.swift */,
+				4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C184FEF27723D3800CE1CFF /* UICollectionView+Extension.swift in Sources */,
+				4C184FEF27723D3800CE1CFF /* UICollectionViewCell+Extension.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
 				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
@@ -330,6 +333,7 @@
 				4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */,
 				4CDB8EFF277110AF009489A5 /* WeaponModel.swift in Sources */,
 				4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */,
+				4C184FF327726A7700CE1CFF /* UICollectionView+Extension.swift in Sources */,
 				4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */,
 				4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */,
 				4CDB8EFC27711069009489A5 /* Weapon.swift in Sources */,

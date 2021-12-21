@@ -25,4 +25,10 @@ class WeaponCollectionViewCell: UICollectionViewCell {
             weaponImage.image = UIImage(named: weapon.image)
         }
     }
+    
+    override var isSelected: Bool {
+        didSet {
+            containerView.backgroundColor = isSelected ? .red : .white
+        }
+    }
 }

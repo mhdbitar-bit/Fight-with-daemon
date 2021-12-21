@@ -30,7 +30,6 @@ final class AmountViewController: UIViewController, Alertable, Lodable {
         self.title = viewModel.title
         
         bindTextField()
-        
         bindValidation()
     }
     
