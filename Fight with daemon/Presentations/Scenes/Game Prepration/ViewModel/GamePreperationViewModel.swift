@@ -9,26 +9,30 @@ import Foundation
 import Combine
 
 final class GamePreperationViewModel {
+    
     let title: String = "Game Preperation"
     
-    var amount: Int
-    var weapons: [Weapon] = [
-        WaterWeapon(),
-        FireWeapon(),
-        ThunderWeapon(),
-        IceWeapon()
-    ]
-    
-    private var selectedWeapons: [Weapon] = []
+    @Published var amount: Int
+    @Published var weapons: [Weapon] = []
+    @Published var selectedWeapons: [Weapon] = []
     
     init(amount: Int) {
         self.amount = amount
     }
     
+    func fetchWeapons() {
+        weapons = [
+            Weapon(name: "Water", price: 2, image: "water-gun", power: .Water),
+            Weapon(name: "Thunder", price: 3, image: "thunder-gun", power: .Thunder),
+            Weapon(name: "Fire", price: 1, image: "fire-gun", power: .Fire),
+            Weapon(name: "Ice", price: 5, image: "ice-gun", power: .Ice)
+        ]
+    }
+    
     func selectWeapon(at index: Int) {
-        if amount > 0 && weapons[index].getPrice() <= amount {
+        if amount > 0 && weapons[index].price <= amount {
             selectedWeapons.append(weapons[index])
-            amount -= weapons[index].getPrice()
+            amount -= weapons[index].price
         }
     }
     
@@ -38,6 +42,6 @@ final class GamePreperationViewModel {
     }
     
     private func getWeaponIndex(selectedWeapon: Weapon) -> Int? {
-        return selectedWeapons.firstIndex(where: { $0.getName() == selectedWeapon.getName() })
+        return selectedWeapons.firstIndex(where: { $0.name == selectedWeapon.name })
     }
 }

@@ -1,5 +1,5 @@
 //
-//  WeaponModel.swift
+//  Weapon.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/20/21.
@@ -14,8 +14,9 @@ enum WeaponPowers {
     case Thunder
 }
 
-public struct WeaponModel: Equatable {
+public struct Weapon: Equatable {
     let name: String
     let price: Int
     let image: String
+    let power: WeaponPowers
 }
