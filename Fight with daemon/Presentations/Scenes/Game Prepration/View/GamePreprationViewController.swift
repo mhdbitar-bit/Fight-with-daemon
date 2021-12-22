@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 final class GamePreprationViewController: UIViewController {
-
+    
     @IBOutlet weak var boardView: UIView! {
         didSet {
             self.boardView.setRoundedConrerWith(corner: 12, width: 1, color: .black.withAlphaComponent(0.2))
@@ -18,6 +18,7 @@ final class GamePreprationViewController: UIViewController {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var weaponsCountLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var startButton: UIButton!
     
     var viewModel: GamePreperationViewModel!
     private var cancellables: Set<AnyCancellable> = []
@@ -29,7 +30,7 @@ final class GamePreprationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = viewModel.title
         
         setupCollectionView()
@@ -37,7 +38,7 @@ final class GamePreprationViewController: UIViewController {
         viewModel.fetchWeapons()
         bindViewModel()
     }
-
+    
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -45,6 +46,7 @@ final class GamePreprationViewController: UIViewController {
             WeaponCollectionViewCell.nib,
             forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier
         )
+        collectionView.allowsSelection = true
         collectionView.allowsMultipleSelection = true
         collectionView.reloadData()
     }
@@ -73,7 +75,12 @@ final class GamePreprationViewController: UIViewController {
         viewModel.$selectedWeapons.sink { [weak self] weapons in
             guard let self = self else { return }
             self.weaponsCountLabel.text = "Selected Weapons count: \(weapons.count)"
+            self.startButton.isEnabled = !weapons.isEmpty
         }.store(in: &cancellables)
+    }
+        
+    @IBAction func startBtnTapped(_ sender: UIButton) {
+        // Go To the next page
     }
 }
 
@@ -110,6 +117,7 @@ extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension GamePreprationViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectWeapon(at: indexPath.row)
     }

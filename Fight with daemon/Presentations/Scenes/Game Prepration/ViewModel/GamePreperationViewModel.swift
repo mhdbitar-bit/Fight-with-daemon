@@ -39,6 +39,7 @@ final class GamePreperationViewModel {
     func removeWeapon(at index: Int) {
         guard let selectedWeaponIndex = getWeaponIndex(selectedWeapon: weapons[index]) else { return }
         selectedWeapons.remove(at: selectedWeaponIndex)
+        amount += weapons[index].price
     }
     
     private func getWeaponIndex(selectedWeapon: Weapon) -> Int? {
