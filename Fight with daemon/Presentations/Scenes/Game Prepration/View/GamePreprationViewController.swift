@@ -22,6 +22,7 @@ final class GamePreprationViewController: UIViewController {
     
     var viewModel: GamePreperationViewModel!
     private var cancellables: Set<AnyCancellable> = []
+    private let padding: CGFloat = 20
     
     convenience init(viewModel: GamePreperationViewModel) {
         self.init()
@@ -80,7 +81,9 @@ final class GamePreprationViewController: UIViewController {
     }
         
     @IBAction func startBtnTapped(_ sender: UIButton) {
-        // Go To the next page
+        let viewModel = DeamonViewModel()
+        let vc = DeaomCountViewController(viewModel: viewModel)
+        self.show(vc, sender: self)
     }
 }
 
@@ -102,15 +105,15 @@ extension GamePreprationViewController: UICollectionViewDataSource {
 extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return padding
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return padding
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat = 20
+        
         let width = (collectionView.frame.size.width - padding) / 2
         return CGSize(width: width, height: width)
     }

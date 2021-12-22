@@ -1,31 +1,31 @@
 //
-//  AmountViewController.swift
+//  DeaomCountViewController.swift
 //  Fight with daemon
 //
-//  Created by Mohammad Bitar on 12/20/21.
+//  Created by Mohammad Bitar on 12/22/21.
 //
 
 import UIKit
 import Combine
 
-final class AmountViewController: UIViewController, Alertable {
-    
-    @IBOutlet weak var amountTextField: UITextField!
+final class DeaomCountViewController: UIViewController, Alertable {
+
+    @IBOutlet weak var deamonTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    private var viewModel: AmountViewModel!
+    private var viewModel: DeamonViewModel!
     private var cancellables = Set<AnyCancellable>()
     
     let INVALID_AMOUNT = "Invalid amount, Please enter a valid amount"
     
-    convenience init(viewModel: AmountViewModel) {
+    convenience init(viewModel: DeamonViewModel) {
         self.init()
         self.viewModel = viewModel
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.title = viewModel.title
         
         bindTextField()
@@ -37,7 +37,7 @@ final class AmountViewController: UIViewController, Alertable {
     }
     
     private func bindTextField() {
-        amountTextField.textPublisher
+        deamonTextField.textPublisher
             .receive(on: DispatchQueue.main)
             .assign(to: \.amount, on: viewModel)
             .store(in: &cancellables)
@@ -52,9 +52,9 @@ final class AmountViewController: UIViewController, Alertable {
     
     private func goToGamePreperationPage() {
         if let amount = Int(viewModel.amount) {
-            let gamePreperationViewModel = GamePreperationViewModel(amount: amount)
-            let vc = GamePreprationViewController(viewModel: gamePreperationViewModel)
-            self.show(vc, sender: self)
+//            let gamePreperationViewModel = GamePreperationViewModel(amount: amount)
+//            let vc = GamePreprationViewController(viewModel: gamePreperationViewModel)
+//            self.show(vc, sender: self)
         } else {
             showAlert(message: INVALID_AMOUNT)
         }

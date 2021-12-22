@@ -27,6 +27,9 @@
 		4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EED27710445009489A5 /* Alertable.swift */; };
 		4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EF8277106CD009489A5 /* Lodable.swift */; };
 		4CDB8EFF277110AF009489A5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EFE277110AF009489A5 /* Weapon.swift */; };
+		4CF1FC8D27739CB900CB2060 /* DeaomCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */; };
+		4CF1FC8E27739CB900CB2060 /* DeaomCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */; };
+		4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		4CDB8EED27710445009489A5 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4CDB8EF8277106CD009489A5 /* Lodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
 		4CDB8EFE277110AF009489A5 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeaomCountViewController.swift; sourceTree = "<group>"; };
+		4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeaomCountViewController.xib; sourceTree = "<group>"; };
+		4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeamonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		4CDB8EF32771051E009489A5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4CF1FC8827739B4300CB2060 /* Daemon Count */,
 				4C184FE1277235C000CE1CFF /* Game Prepration */,
 				4CDB8EF527710539009489A5 /* LunchScene */,
 				4CDB8EF0277104FC009489A5 /* Amount Scene */,
@@ -235,6 +242,32 @@
 				4CDB8EFE277110AF009489A5 /* Weapon.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4CF1FC8827739B4300CB2060 /* Daemon Count */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1FC8A27739B6100CB2060 /* ViewModel */,
+				4CF1FC8927739B5B00CB2060 /* Views */,
+			);
+			path = "Daemon Count";
+			sourceTree = "<group>";
+		};
+		4CF1FC8927739B5B00CB2060 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */,
+				4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CF1FC8A27739B6100CB2060 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C184FE7277235F000CE1CFF /* GamePreprationViewController.xib in Resources */,
+				4CF1FC8E27739CB900CB2060 /* DeaomCountViewController.xib in Resources */,
 				4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */,
 				4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */,
 				4CDB8ED92770F5BA009489A5 /* LaunchScreen.storyboard in Resources */,
@@ -313,10 +347,12 @@
 				4C184FEF27723D3800CE1CFF /* UICollectionViewCell+Extension.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
+				4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */,
 				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
 				4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */,
+				4CF1FC8D27739CB900CB2060 /* DeaomCountViewController.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */,
 				4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */,
