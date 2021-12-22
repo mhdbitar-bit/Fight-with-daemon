@@ -25,9 +25,19 @@ final class GamePreperationViewModel {
         self.amount = amount
     }
     
-    func selectWeapon(index: Int) {
-        if amount > 0 && weapons[index].getPrice() >= amount {
+    func selectWeapon(at index: Int) {
+        if amount > 0 && weapons[index].getPrice() <= amount {
             selectedWeapons.append(weapons[index])
+            amount -= weapons[index].getPrice()
         }
+    }
+    
+    func removeWeapon(at index: Int) {
+        guard let selectedWeaponIndex = getWeaponIndex(selectedWeapon: weapons[index]) else { return }
+        selectedWeapons.remove(at: selectedWeaponIndex)
+    }
+    
+    private func getWeaponIndex(selectedWeapon: Weapon) -> Int? {
+        return selectedWeapons.firstIndex(where: { $0.getName() == selectedWeapon.getName() })
     }
 }

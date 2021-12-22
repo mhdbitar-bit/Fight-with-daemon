@@ -73,6 +73,10 @@ extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
 
 extension GamePreprationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectWeapon(index: indexPath.row)
+        viewModel.selectWeapon(at: indexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        viewModel.removeWeapon(at: indexPath.row)
     }
 }

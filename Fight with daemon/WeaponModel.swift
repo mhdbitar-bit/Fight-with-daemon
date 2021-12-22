@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum WeaponPowers {
+    case Water
+    case Fire
+    case Ice
+    case Thunder
+}
+
 public struct WeaponModel: Equatable {
     let name: String
     let price: Int
