@@ -50,16 +50,26 @@ final class GamePreprationViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        bindWeapons()
+        bindAmount()
+        bindSelectedWeapons()
+    }
+    
+    private func bindWeapons() {
         viewModel.$weapons.sink { [weak self] _ in
             guard let self = self else { return }
             self.collectionView.reloadData()
         }.store(in: &cancellables)
-        
+    }
+    
+    private func bindAmount() {
         viewModel.$amount.sink { [weak self] amount in
             guard let self = self else { return }
             self.amountLabel.text = "Amount: \(amount)"
         }.store(in: &cancellables)
-        
+    }
+    
+    private func bindSelectedWeapons() {
         viewModel.$selectedWeapons.sink { [weak self] weapons in
             guard let self = self else { return }
             self.weaponsCountLabel.text = "Selected Weapons count: \(weapons.count)"
