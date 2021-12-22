@@ -7,16 +7,9 @@
 
 import Foundation
 
-enum WeaponPowers {
-    case Water
-    case Fire
-    case Ice
-    case Thunder
-}
-
 public struct Weapon: Equatable {
     let name: String
     let price: Int
     let image: String
-    let power: WeaponPowers
+    let power: Power
 }

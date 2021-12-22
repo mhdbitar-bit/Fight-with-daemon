@@ -30,6 +30,8 @@
 		4CF1FC8D27739CB900CB2060 /* DeaomCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */; };
 		4CF1FC8E27739CB900CB2060 /* DeaomCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */; };
 		4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */; };
+		4CF1FC922773A70300CB2060 /* Deamon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC912773A70300CB2060 /* Deamon.swift */; };
+		4CF1FC942773A71B00CB2060 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC932773A71B00CB2060 /* Power.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeaomCountViewController.swift; sourceTree = "<group>"; };
 		4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeaomCountViewController.xib; sourceTree = "<group>"; };
 		4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeamonViewModel.swift; sourceTree = "<group>"; };
+		4CF1FC912773A70300CB2060 /* Deamon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deamon.swift; sourceTree = "<group>"; };
+		4CF1FC932773A71B00CB2060 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				4CDB8EFE277110AF009489A5 /* Weapon.swift */,
+				4CF1FC912773A70300CB2060 /* Deamon.swift */,
+				4CF1FC932773A71B00CB2060 /* Power.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C184FEF27723D3800CE1CFF /* UICollectionViewCell+Extension.swift in Sources */,
+				4CF1FC922773A70300CB2060 /* Deamon.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
 				4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */,
@@ -360,6 +367,7 @@
 				4CDB8EEA27710346009489A5 /* UIButton+Extesnion.swift in Sources */,
 				4C184FF327726A7700CE1CFF /* UICollectionView+Extension.swift in Sources */,
 				4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */,
+				4CF1FC942773A71B00CB2060 /* Power.swift in Sources */,
 				4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
