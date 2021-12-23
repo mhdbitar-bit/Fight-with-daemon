@@ -10,7 +10,8 @@ import Combine
 
 final class WeaponsViewModel {
     
-    let title: String = "Game Preperation"
+    public let title: String = "Game Preperation"
+    private var previouseAmount: Int = 0
     
     @Published var amount: Int
     @Published var weapons: [Weapon] = []
@@ -18,9 +19,10 @@ final class WeaponsViewModel {
     
     init(amount: Int) {
         self.amount = amount
+        self.previouseAmount = amount
     }
     
-    func fetchWeapons() {
+    public func fetchWeapons() {
         weapons = [
             Weapon(name: "Water", price: 2, image: "water-gun", power: .Water),
             Weapon(name: "Magnet", price: 3, image: "magnet-gun", power: .Magnet),
@@ -29,17 +31,22 @@ final class WeaponsViewModel {
         ]
     }
     
-    func selectWeapon(at index: Int) {
+    public func selectWeapon(at index: Int) {
         if amount > 0 && weapons[index].price <= amount {
             selectedWeapons.append(weapons[index])
             amount -= weapons[index].price
         }
     }
     
-    func removeWeapon(at index: Int) {
+    public func removeWeapon(at index: Int) {
         guard let selectedWeaponIndex = getWeaponIndex(selectedWeapon: weapons[index]) else { return }
         selectedWeapons.remove(at: selectedWeaponIndex)
         amount += weapons[index].price
+    }
+    
+    public func reset() {
+        selectedWeapons.removeAll()
+        self.amount = previouseAmount
     }
     
     private func getWeaponIndex(selectedWeapon: Weapon) -> Int? {

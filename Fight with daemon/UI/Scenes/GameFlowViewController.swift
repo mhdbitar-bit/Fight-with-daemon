@@ -9,7 +9,7 @@ import UIKit
 
 protocol GameFlowViewDelegate: AnyObject {
     func didReceiveAmount(amount: Int)
-    func didReceiveWeapons(weapons: [Weapon])
+    func didReceiveWeapons(weapons: [Weapon], amount: Int)
     func didReceiveDeamons(deamons: Int)
 }
 
@@ -40,8 +40,9 @@ extension GameFlowViewController: GameFlowViewDelegate {
         show(vc, sender: self)
     }
     
-    func didReceiveWeapons(weapons: [Weapon]) {
+    func didReceiveWeapons(weapons: [Weapon], amount: Int) {
         viewModel.weapons = weapons
+        viewModel.amount = amount
         let deamonsViewModel = DeamonViewModel()
         let vc = DeamonsViewController(viewModel: deamonsViewModel, delegate: self)
         show(vc, sender: self)

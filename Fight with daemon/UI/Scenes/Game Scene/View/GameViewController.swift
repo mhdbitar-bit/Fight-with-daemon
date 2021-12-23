@@ -47,7 +47,9 @@ class GameViewController: UIViewController, Lodable {
     }
     
     @IBAction func fightBtnTapped(_ sender: UIButton) {
-        showSpinner()
+//        viewModel.startFighting()
+        let vc = ResultViewController()
+        show(vc, sender: self)
     }
 }
 

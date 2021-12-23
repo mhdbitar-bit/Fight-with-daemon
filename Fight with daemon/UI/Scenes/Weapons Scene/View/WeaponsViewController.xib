@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="App-Hi-nKZ">
-                    <rect key="frame" x="20" y="184" width="374" height="612"/>
+                    <rect key="frame" x="20" y="235" width="374" height="557"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AEK-Jq-Ygd">
@@ -65,29 +65,36 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJf-DV-5Go">
-                    <rect key="frame" x="168" y="820" width="78" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="c2P-8m-5ks"/>
-                    </constraints>
+                    <rect key="frame" x="176" y="812" width="62" height="30"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Start Game"/>
+                    <state key="normal" title="Continue"/>
                     <connections>
                         <action selector="startBtnTapped:" destination="-1" eventType="touchUpInside" id="bPl-Wo-FVX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGj-oU-o4w">
+                    <rect key="frame" x="176.5" y="184" width="61" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Reset"/>
+                    <connections>
+                        <action selector="resetBtnTapped:" destination="-1" eventType="touchUpInside" id="Az4-nQ-Gfb"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="iJf-DV-5Go" firstAttribute="top" secondItem="App-Hi-nKZ" secondAttribute="bottom" constant="24" id="4Oh-0b-REH"/>
+                <constraint firstItem="OGj-oU-o4w" firstAttribute="top" secondItem="v9L-Lc-1MJ" secondAttribute="bottom" constant="20" id="2wJ-2r-oA7"/>
+                <constraint firstItem="iJf-DV-5Go" firstAttribute="top" secondItem="App-Hi-nKZ" secondAttribute="bottom" constant="20" id="4Oh-0b-REH"/>
                 <constraint firstItem="iJf-DV-5Go" firstAttribute="centerX" secondItem="App-Hi-nKZ" secondAttribute="centerX" id="6Kf-Mr-czu"/>
                 <constraint firstItem="App-Hi-nKZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Aga-t7-qDJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="App-Hi-nKZ" secondAttribute="trailing" constant="20" id="Apz-6e-5sa"/>
+                <constraint firstItem="OGj-oU-o4w" firstAttribute="centerX" secondItem="v9L-Lc-1MJ" secondAttribute="centerX" id="Hpv-qg-ehc"/>
                 <constraint firstItem="v9L-Lc-1MJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="VNW-kO-mzg"/>
-                <constraint firstItem="App-Hi-nKZ" firstAttribute="top" secondItem="v9L-Lc-1MJ" secondAttribute="bottom" constant="20" id="cNg-sb-JlL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iJf-DV-5Go" secondAttribute="bottom" constant="20" id="f3X-3l-oCo"/>
                 <constraint firstItem="v9L-Lc-1MJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="gDG-AA-ROd"/>
-                <constraint firstAttribute="bottom" secondItem="App-Hi-nKZ" secondAttribute="bottom" constant="100" id="hW3-lU-aLp"/>
                 <constraint firstAttribute="trailing" secondItem="v9L-Lc-1MJ" secondAttribute="trailing" constant="20" id="w8d-CQ-rET"/>
+                <constraint firstItem="App-Hi-nKZ" firstAttribute="top" secondItem="OGj-oU-o4w" secondAttribute="bottom" constant="20" id="wbL-tk-yoK"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
         </view>

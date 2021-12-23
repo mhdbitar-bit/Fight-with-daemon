@@ -16,7 +16,7 @@ final class GameViewModel {
     @Published var weapons: [Weapon] = []
     @Published var selectedDeamons: [Deamon] = []
     
-    let deamons: [Deamon] = [
+    private let deamons: [Deamon] = [
         Deamon(name: "Water", powers: [.Water]),
         Deamon(name: "Fire", powers: [.Fire]),
         Deamon(name: "Magnet", powers: [.Magnet]),
@@ -25,12 +25,31 @@ final class GameViewModel {
         Deamon(name: "Water + Fire + Magnet", powers: [.Water, .Fire, .Magnet])
     ]
     
-    func generateDeamons() {
+    public func generateDeamons() {
         selectedDeamons = []
         var index = 0
         for _ in 0..<deamonsCount {
             index = Int.random(in: 0..<deamons.count - 1)
             selectedDeamons.append(deamons[index])
         }
+    }
+    
+    public func startFighting() {
+        var containedWeapon = 0
+        for weapon in weapons {
+            if selectedDeamons.contains(where: { deamon in
+                if deamon.powers.contains(weapon.power) {
+                    return true
+                } else {
+                    return false
+                }
+            }) {
+                containedWeapon += 1
+            }
+        }
+        
+//        if amount > 0 && containedWeapon {
+//            
+//        }
     }
 }

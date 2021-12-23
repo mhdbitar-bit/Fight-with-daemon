@@ -28,12 +28,12 @@
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-zV-abO">
-                    <rect key="frame" x="172" y="230" width="70" height="50"/>
+                    <rect key="frame" x="165.5" y="230" width="83" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5Z6-7f-1RF"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Continue"/>
                     <connections>
                         <action selector="submitBtnTapped:" destination="-1" eventType="touchUpInside" id="sas-Ia-OIl"/>
                     </connections>

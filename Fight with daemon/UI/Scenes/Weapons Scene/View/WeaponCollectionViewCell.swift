@@ -17,6 +17,7 @@ class WeaponCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var weaponImage: UIImageView!
     @IBOutlet weak var weaponNameLabel: UILabel!
     @IBOutlet weak var weaponPriceLabel: UILabel!
+    @IBOutlet weak var checkImage: UIImageView!
     
     var weapon: Weapon! {
         didSet {
