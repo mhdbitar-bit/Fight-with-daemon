@@ -16,6 +16,8 @@
 		4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF02772475C00CE1CFF /* UIView+Extension.swift */; };
 		4C184FF327726A7700CE1CFF /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */; };
 		4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40496F27746D90005DAF79 /* GameFlowViewController.swift */; };
+		4C404975277490B4005DAF79 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C404973277490B4005DAF79 /* ResultViewController.swift */; };
+		4C404976277490B4005DAF79 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C404974277490B4005DAF79 /* ResultViewController.xib */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		4C184FF02772475C00CE1CFF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		4C40496F27746D90005DAF79 /* GameFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowViewController.swift; sourceTree = "<group>"; };
+		4C404973277490B4005DAF79 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		4C404974277490B4005DAF79 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,23 @@
 				4C184FE82772395700CE1CFF /* GamePreperationViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4C4049712774909D005DAF79 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				4C404972277490A3005DAF79 /* Views */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		4C404972277490A3005DAF79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C404973277490B4005DAF79 /* ResultViewController.swift */,
+				4C404974277490B4005DAF79 /* ResultViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4CDB8EC02770F5B9009489A5 = {
@@ -207,6 +228,7 @@
 		4CDB8EF32771051E009489A5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4C4049712774909D005DAF79 /* Result */,
 				4CF1FC952773A83F00CB2060 /* Game */,
 				4CF1FC8827739B4300CB2060 /* Daemon Count */,
 				4C184FE1277235C000CE1CFF /* Game Prepration */,
@@ -377,6 +399,7 @@
 				4CF1FC9D2773A8AD00CB2060 /* GameViewController.xib in Resources */,
 				4CDB8ED92770F5BA009489A5 /* LaunchScreen.storyboard in Resources */,
 				4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */,
+				4C404976277490B4005DAF79 /* ResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +419,7 @@
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
 				4CF1FC9C2773A8AD00CB2060 /* GameViewController.swift in Sources */,
 				4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */,
+				4C404975277490B4005DAF79 /* ResultViewController.swift in Sources */,
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
 				4CF1FC992773A85600CB2060 /* GameViewModel.swift in Sources */,
 				4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */,
