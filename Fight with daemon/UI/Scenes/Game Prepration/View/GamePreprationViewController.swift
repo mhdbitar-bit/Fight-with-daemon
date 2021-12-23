@@ -20,7 +20,7 @@ final class GamePreprationViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     
-    var viewModel: GamePreperationViewModel!
+    private var viewModel: GamePreperationViewModel!
     private var cancellables: Set<AnyCancellable> = []
     private let padding: CGFloat = 20
     
@@ -82,7 +82,7 @@ final class GamePreprationViewController: UIViewController {
         
     @IBAction func startBtnTapped(_ sender: UIButton) {
         let viewModel = DeamonViewModel()
-        let vc = DeaomCountViewController(viewModel: viewModel)
+        let vc = DeamonsViewController(viewModel: viewModel)
         self.show(vc, sender: self)
     }
 }

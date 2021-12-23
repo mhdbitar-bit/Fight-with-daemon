@@ -15,18 +15,21 @@ final class AmountViewController: UIViewController, Alertable {
     
     private var viewModel: AmountViewModel!
     private var cancellables = Set<AnyCancellable>()
+    var delegate: GameFlowViewDelegate?
     
     let INVALID_AMOUNT = "Invalid amount, Please enter a valid amount"
     
-    convenience init(viewModel: AmountViewModel) {
+    convenience init(viewModel: AmountViewModel, delegate: GameFlowViewDelegate?) {
         self.init()
         self.viewModel = viewModel
+        self.delegate = delegate
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = viewModel.title
+        self.navigationItem.setHidesBackButton(true, animated: false)
         
         bindTextField()
         bindValidation()
@@ -52,9 +55,7 @@ final class AmountViewController: UIViewController, Alertable {
     
     private func goToGamePreperationPage() {
         if let amount = Int(viewModel.amount) {
-            let gamePreperationViewModel = GamePreperationViewModel(amount: amount)
-            let vc = GamePreprationViewController(viewModel: gamePreperationViewModel)
-            self.show(vc, sender: self)
+            delegate?.didReceiveAmount(amount: amount)
         } else {
             showAlert(message: INVALID_AMOUNT)
         }

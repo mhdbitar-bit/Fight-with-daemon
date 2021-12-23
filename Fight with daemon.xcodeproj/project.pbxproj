@@ -15,6 +15,7 @@
 		4C184FEF27723D3800CE1CFF /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FEE27723D3800CE1CFF /* UICollectionViewCell+Extension.swift */; };
 		4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF02772475C00CE1CFF /* UIView+Extension.swift */; };
 		4C184FF327726A7700CE1CFF /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */; };
+		4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40496F27746D90005DAF79 /* GameFlowViewController.swift */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -27,11 +28,14 @@
 		4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EED27710445009489A5 /* Alertable.swift */; };
 		4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EF8277106CD009489A5 /* Lodable.swift */; };
 		4CDB8EFF277110AF009489A5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8EFE277110AF009489A5 /* Weapon.swift */; };
-		4CF1FC8D27739CB900CB2060 /* DeaomCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */; };
-		4CF1FC8E27739CB900CB2060 /* DeaomCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */; };
+		4CF1FC8D27739CB900CB2060 /* DeamonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8B27739CB900CB2060 /* DeamonsViewController.swift */; };
+		4CF1FC8E27739CB900CB2060 /* DeamonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8C27739CB900CB2060 /* DeamonsViewController.xib */; };
 		4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */; };
 		4CF1FC922773A70300CB2060 /* Deamon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC912773A70300CB2060 /* Deamon.swift */; };
 		4CF1FC942773A71B00CB2060 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC932773A71B00CB2060 /* Power.swift */; };
+		4CF1FC992773A85600CB2060 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC982773A85600CB2060 /* GameViewModel.swift */; };
+		4CF1FC9C2773A8AD00CB2060 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1FC9A2773A8AD00CB2060 /* GameViewController.swift */; };
+		4CF1FC9D2773A8AD00CB2060 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1FC9B2773A8AD00CB2060 /* GameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,7 @@
 		4C184FEE27723D3800CE1CFF /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		4C184FF02772475C00CE1CFF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4C184FF227726A7700CE1CFF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		4C40496F27746D90005DAF79 /* GameFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowViewController.swift; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,11 +62,14 @@
 		4CDB8EED27710445009489A5 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4CDB8EF8277106CD009489A5 /* Lodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
 		4CDB8EFE277110AF009489A5 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
-		4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeaomCountViewController.swift; sourceTree = "<group>"; };
-		4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeaomCountViewController.xib; sourceTree = "<group>"; };
+		4CF1FC8B27739CB900CB2060 /* DeamonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeamonsViewController.swift; sourceTree = "<group>"; };
+		4CF1FC8C27739CB900CB2060 /* DeamonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeamonsViewController.xib; sourceTree = "<group>"; };
 		4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeamonViewModel.swift; sourceTree = "<group>"; };
 		4CF1FC912773A70300CB2060 /* Deamon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deamon.swift; sourceTree = "<group>"; };
 		4CF1FC932773A71B00CB2060 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		4CF1FC982773A85600CB2060 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		4CF1FC9A2773A8AD00CB2060 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		4CF1FC9B2773A8AD00CB2060 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF1FC8727738EC000CB2060 /* Data */,
-				4CDB8EEF277104ED009489A5 /* Presentations */,
+				4CDB8EEF277104ED009489A5 /* UI */,
 				4CDB8EF427710527009489A5 /* Application */,
 				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
 				4CDB8EF72771055C009489A5 /* Resources */,
@@ -161,13 +169,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		4CDB8EEF277104ED009489A5 /* Presentations */ = {
+		4CDB8EEF277104ED009489A5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				4CDB8EF32771051E009489A5 /* Scenes */,
 				4CDB8EEB27710427009489A5 /* Utils */,
 			);
-			path = Presentations;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		4CDB8EF0277104FC009489A5 /* Amount Scene */ = {
@@ -199,10 +207,12 @@
 		4CDB8EF32771051E009489A5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4CF1FC952773A83F00CB2060 /* Game */,
 				4CF1FC8827739B4300CB2060 /* Daemon Count */,
 				4C184FE1277235C000CE1CFF /* Game Prepration */,
 				4CDB8EF527710539009489A5 /* LunchScene */,
 				4CDB8EF0277104FC009489A5 /* Amount Scene */,
+				4C40496F27746D90005DAF79 /* GameFlowViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -262,8 +272,8 @@
 		4CF1FC8927739B5B00CB2060 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4CF1FC8B27739CB900CB2060 /* DeaomCountViewController.swift */,
-				4CF1FC8C27739CB900CB2060 /* DeaomCountViewController.xib */,
+				4CF1FC8B27739CB900CB2060 /* DeamonsViewController.swift */,
+				4CF1FC8C27739CB900CB2060 /* DeamonsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +284,32 @@
 				4CF1FC8F2773A32100CB2060 /* DeamonViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CF1FC952773A83F00CB2060 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1FC972773A84B00CB2060 /* View */,
+				4CF1FC962773A84400CB2060 /* ViewModel */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		4CF1FC962773A84400CB2060 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1FC982773A85600CB2060 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CF1FC972773A84B00CB2060 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1FC9A2773A8AD00CB2060 /* GameViewController.swift */,
+				4CF1FC9B2773A8AD00CB2060 /* GameViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +371,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C184FE7277235F000CE1CFF /* GamePreprationViewController.xib in Resources */,
-				4CF1FC8E27739CB900CB2060 /* DeaomCountViewController.xib in Resources */,
+				4CF1FC8E27739CB900CB2060 /* DeamonsViewController.xib in Resources */,
 				4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */,
 				4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */,
+				4CF1FC9D2773A8AD00CB2060 /* GameViewController.xib in Resources */,
 				4CDB8ED92770F5BA009489A5 /* LaunchScreen.storyboard in Resources */,
 				4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */,
 			);
@@ -357,9 +394,12 @@
 				4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */,
 				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
+				4CF1FC9C2773A8AD00CB2060 /* GameViewController.swift in Sources */,
+				4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */,
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
+				4CF1FC992773A85600CB2060 /* GameViewModel.swift in Sources */,
 				4C184FE92772395700CE1CFF /* GamePreperationViewModel.swift in Sources */,
-				4CF1FC8D27739CB900CB2060 /* DeaomCountViewController.swift in Sources */,
+				4CF1FC8D27739CB900CB2060 /* DeamonsViewController.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */,
 				4C184FE6277235F000CE1CFF /* GamePreprationViewController.swift in Sources */,

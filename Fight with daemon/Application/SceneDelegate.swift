@@ -10,21 +10,22 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let navigationController = UINavigationController()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let navigationController = UINavigationController()
-        navigationController.setViewControllers([makeAmountViewController()], animated: false)
+       
+        navigationController.setViewControllers([makeGameViewController()], animated: false)
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
-    private func makeAmountViewController() -> AmountViewController {
-        let viewModel = AmountViewModel()
-        let vc = AmountViewController(viewModel: viewModel)
+    private func makeGameViewController() -> GameFlowViewController {
+        let viewModel = GameViewModel()
+        let vc = GameFlowViewController(viewModel: viewModel)
         return vc
     }
 }
