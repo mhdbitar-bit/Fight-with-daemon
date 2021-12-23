@@ -14,13 +14,15 @@ final class DeamonsViewController: UIViewController, Alertable {
     @IBOutlet weak var submitButton: UIButton!
     
     private var viewModel: DeamonViewModel!
+    private var delegate: GameFlowViewDelegate?
     private var cancellables = Set<AnyCancellable>()
     
     let INVALID_AMOUNT = "Invalid amount, Please enter a valid amount"
     
-    convenience init(viewModel: DeamonViewModel) {
+    convenience init(viewModel: DeamonViewModel, delegate: GameFlowViewDelegate) {
         self.init()
         self.viewModel = viewModel
+        self.delegate = delegate
     }
     
     override func viewDidLoad() {
@@ -51,12 +53,11 @@ final class DeamonsViewController: UIViewController, Alertable {
     }
     
     private func goToGamePreperationPage() {
-//        if let amount = Int(viewModel.amount) {
-//            let gameViewModel = GameViewModel(amount: amount, weapons: viewModel.$)
-//            let vc = GameViewController(viewModel: gamePreperationViewModel)
-//            self.show(vc, sender: self)
-//        } else {
-//            showAlert(message: INVALID_AMOUNT)
-//        }
+        if let amount = Int(viewModel.amount) {
+            guard let delegate = delegate else { return }
+            delegate.didReceiveDeamons(deamons: amount)
+        } else {
+            showAlert(message: INVALID_AMOUNT)
+        }
     }
 }

@@ -15,7 +15,7 @@ final class AmountViewController: UIViewController, Alertable {
     
     private var viewModel: AmountViewModel!
     private var cancellables = Set<AnyCancellable>()
-    var delegate: GameFlowViewDelegate?
+    private var delegate: GameFlowViewDelegate?
     
     let INVALID_AMOUNT = "Invalid amount, Please enter a valid amount"
     
@@ -55,7 +55,8 @@ final class AmountViewController: UIViewController, Alertable {
     
     private func goToGamePreperationPage() {
         if let amount = Int(viewModel.amount) {
-            delegate?.didReceiveAmount(amount: amount)
+            guard let delegate = delegate else { return }
+            delegate.didReceiveAmount(amount: amount)
         } else {
             showAlert(message: INVALID_AMOUNT)
         }

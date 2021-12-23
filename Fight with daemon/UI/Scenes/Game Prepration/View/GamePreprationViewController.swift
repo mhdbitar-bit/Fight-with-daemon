@@ -21,12 +21,14 @@ final class GamePreprationViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     private var viewModel: GamePreperationViewModel!
+    private var delegate: GameFlowViewDelegate?
     private var cancellables: Set<AnyCancellable> = []
     private let padding: CGFloat = 20
     
-    convenience init(viewModel: GamePreperationViewModel) {
+    convenience init(viewModel: GamePreperationViewModel, delegate: GameFlowViewDelegate) {
         self.init()
         self.viewModel = viewModel
+        self.delegate = delegate
     }
     
     override func viewDidLoad() {
@@ -81,9 +83,8 @@ final class GamePreprationViewController: UIViewController {
     }
         
     @IBAction func startBtnTapped(_ sender: UIButton) {
-        let viewModel = DeamonViewModel()
-        let vc = DeamonsViewController(viewModel: viewModel)
-        self.show(vc, sender: self)
+        guard let delegate = delegate else { return }
+        delegate.didReceiveWeapons(weapons: viewModel.selectedWeapons)
     }
 }
 
