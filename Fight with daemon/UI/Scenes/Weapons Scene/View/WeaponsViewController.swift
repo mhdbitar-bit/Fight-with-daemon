@@ -1,5 +1,5 @@
 //
-//  GamePreprationViewController.swift
+//  WeaponsViewController.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/21/21.
@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class GamePreprationViewController: UIViewController {
+final class WeaponsViewController: UIViewController {
     
     @IBOutlet weak var boardView: UIView! {
         didSet {
@@ -20,12 +20,12 @@ final class GamePreprationViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     
-    private var viewModel: GamePreperationViewModel!
+    private var viewModel: WeaponsViewModel!
     private var delegate: GameFlowViewDelegate?
     private var cancellables: Set<AnyCancellable> = []
     private let padding: CGFloat = 20
     
-    convenience init(viewModel: GamePreperationViewModel, delegate: GameFlowViewDelegate) {
+    convenience init(viewModel: WeaponsViewModel, delegate: GameFlowViewDelegate) {
         self.init()
         self.viewModel = viewModel
         self.delegate = delegate
@@ -88,7 +88,7 @@ final class GamePreprationViewController: UIViewController {
     }
 }
 
-extension GamePreprationViewController: UICollectionViewDataSource {
+extension WeaponsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.weapons.count
@@ -103,7 +103,7 @@ extension GamePreprationViewController: UICollectionViewDataSource {
     }
 }
 
-extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
+extension WeaponsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return padding
@@ -120,7 +120,7 @@ extension GamePreprationViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension GamePreprationViewController: UICollectionViewDelegate {
+extension WeaponsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectWeapon(at: indexPath.row)

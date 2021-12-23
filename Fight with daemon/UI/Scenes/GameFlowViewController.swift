@@ -35,8 +35,8 @@ extension GameFlowViewController: GameFlowViewDelegate {
     
     func didReceiveAmount(amount: Int) {
         viewModel.amount = amount
-        let weaponsViewModel = GamePreperationViewModel(amount: amount)
-        let vc = GamePreprationViewController(viewModel: weaponsViewModel, delegate: self)
+        let weaponsViewModel = WeaponsViewModel(amount: amount)
+        let vc = WeaponsViewController(viewModel: weaponsViewModel, delegate: self)
         show(vc, sender: self)
     }
     

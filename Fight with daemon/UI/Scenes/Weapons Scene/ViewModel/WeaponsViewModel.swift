@@ -1,5 +1,5 @@
 //
-//  GamePreperationViewModel.swift
+//  WeaponsViewModel.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/21/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class GamePreperationViewModel {
+final class WeaponsViewModel {
     
     let title: String = "Game Preperation"
     
@@ -23,7 +23,7 @@ final class GamePreperationViewModel {
     func fetchWeapons() {
         weapons = [
             Weapon(name: "Water", price: 2, image: "water-gun", power: .Water),
-            Weapon(name: "Thunder", price: 3, image: "thunder-gun", power: .Thunder),
+            Weapon(name: "Magnet", price: 3, image: "magnet-gun", power: .Magnet),
             Weapon(name: "Fire", price: 1, image: "fire-gun", power: .Fire),
             Weapon(name: "Ice", price: 5, image: "ice-gun", power: .Ice)
         ]

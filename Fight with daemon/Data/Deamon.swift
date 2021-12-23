@@ -9,6 +9,5 @@ import Foundation
 
 public struct Deamon: Equatable {
     let name: String
-    let image: String
     let powers: [Power]
 }
