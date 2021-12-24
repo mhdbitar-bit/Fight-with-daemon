@@ -1,66 +1,62 @@
 //
-//  GameViewController.swift
+//  ActivityViewController.swift
 //  Fight with daemon
 //
-//  Created by Mohammad Bitar on 12/22/21.
+//  Created by Mohammad Bitar on 12/24/21.
 //
 
 import UIKit
 import Combine
 
-class GameViewController: UIViewController, Lodable {
+final class ActivityViewController: UIViewController {
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var viewModel: GameViewModel!
-    private var delegate: GameFlowViewDelegate?
+    private var viewModel: ActivityViewModel!
     private var cancellables: Set<AnyCancellable> = []
-    var activityIndicator = UIActivityIndicatorView()
-    
+
     private let padding: CGFloat = 20
     private let headerID = "Header"
     
-    
-    convenience init(viewModel: GameViewModel) {
+    convenience init(viewModel: ActivityViewModel) {
         self.init()
         self.viewModel = viewModel
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        viewModel.generateDeamons()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = viewModel.title
-        
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
+        registerCollectionViewCells()
+        setupCollectionHeaderSize()
+        collectionView.reloadData()
+    }
+    
+    private func registerCollectionViewCells() {
         collectionView.register(DeamonCollectionViewCell.nib, forCellWithReuseIdentifier: DeamonCollectionViewCell.identifier)
         collectionView.register(WeaponCollectionViewCell.nib, forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier)
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.headerID)
-        
-        let flow = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        flow.headerReferenceSize = CGSize(width: collectionView.frame.width,height: 30)
     }
     
-    @IBAction func fightBtnTapped(_ sender: UIButton) {
-//        viewModel.startFighting()
-        let vc = ResultViewController()
-        show(vc, sender: self)
+    private func setupCollectionHeaderSize() {
+        let flow = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flow.headerReferenceSize = CGSize(width: collectionView.frame.width, height: 30)
     }
 }
 
-extension GameViewController: UICollectionViewDataSource {
+extension ActivityViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? viewModel.weapons.count : viewModel.selectedDeamons.count
+        return section == 0 ? viewModel.weapons.count : 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,7 +70,7 @@ extension GameViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DeamonCollectionViewCell.identifier, for: indexPath) as? DeamonCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.deamon = viewModel.selectedDeamons[indexPath.row]
+            cell.deamon = viewModel.deamon
             return cell
         }
     }
@@ -90,7 +86,7 @@ extension GameViewController: UICollectionViewDataSource {
                if indexPath.section == 0 {
                    label.text = "Weappons"
                } else {
-                   label.text = "Deamons"
+                   label.text = "Deamon"
                }
                label.textAlignment = .center
            }
@@ -98,7 +94,7 @@ extension GameViewController: UICollectionViewDataSource {
        }
 }
 
-extension GameViewController: UICollectionViewDelegateFlowLayout {
+extension ActivityViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return padding

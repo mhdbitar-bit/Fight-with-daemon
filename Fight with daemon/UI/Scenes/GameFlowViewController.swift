@@ -15,9 +15,9 @@ protocol GameFlowViewDelegate: AnyObject {
 
 final class GameFlowViewController: UIViewController {
     
-    private var viewModel: GameViewModel!
+    private var viewModel: FightViewModel!
     
-    convenience init(viewModel: GameViewModel) {
+    convenience init(viewModel: FightViewModel) {
         self.init()
         self.viewModel = viewModel
     }
@@ -50,7 +50,7 @@ extension GameFlowViewController: GameFlowViewDelegate {
     
     func didReceiveDeamons(deamons: Int) {
         viewModel.deamonsCount = deamons
-        let vc = GameViewController(viewModel: viewModel)
+        let vc = FightsViewController(viewModel: viewModel)
         show(vc, sender: self)
     }
 }

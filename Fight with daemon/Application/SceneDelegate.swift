@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeGameViewController() -> GameFlowViewController {
-        let viewModel = GameViewModel()
+        let viewModel = FightViewModel()
         let vc = GameFlowViewController(viewModel: viewModel)
         return vc
     }
