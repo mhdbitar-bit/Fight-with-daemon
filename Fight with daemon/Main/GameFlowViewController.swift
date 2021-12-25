@@ -1,5 +1,5 @@
 //
-//  GameFlowViewController.swift
+//  BattlePreperationFlowViewController.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/23/21.
@@ -13,7 +13,7 @@ protocol GameFlowViewDelegate: AnyObject {
     func didReceiveDeamons(demons: [Deamon])
 }
 
-final class GameFlowViewController: UIViewController {
+final class BattlePreperationFlowViewController: UIViewController {
     
     var battle: Battle?
     
@@ -30,7 +30,7 @@ final class GameFlowViewController: UIViewController {
     }
 }
 
-extension GameFlowViewController: GameFlowViewDelegate {
+extension BattlePreperationFlowViewController: GameFlowViewDelegate {
     
     func didReceiveAmount(amount: Int) {
         self.amount = amount

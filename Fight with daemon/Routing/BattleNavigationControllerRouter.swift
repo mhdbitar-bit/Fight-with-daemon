@@ -26,9 +26,9 @@ final class BattleNavigationControllerRouter: BattleDelegate {
     }
     
     func buyWeapons(amount: Int) {
-        let viewModel = WeaponsViewModel(amount: amount)
-        let vc = WeaponsViewController(viewModel: viewModel, delegate: GameFlowViewController())
-        navigationController.present(vc, animated: true, completion: nil)
+//        let viewModel = WeaponsViewModel(amount: amount)
+//        let vc = WeaponsViewController(viewModel: viewModel, delegate: BattlePreperationFlowViewController())
+//        navigationController.present(vc, animated: true, completion: nil)
     }
     
     private func show(_ viewController: UIViewController) {

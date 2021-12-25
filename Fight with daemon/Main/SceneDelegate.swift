@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
        
-        navigationController.setViewControllers([GameFlowViewController()], animated: false)
+        navigationController.setViewControllers([BattlePreperationFlowViewController()], animated: false)
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
