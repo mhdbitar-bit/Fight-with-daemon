@@ -17,7 +17,7 @@ final class DeamonsViewController: UIViewController, Alertable {
     private var delegate: GameFlowViewDelegate?
     private var cancellables = Set<AnyCancellable>()
     
-    let INVALID_AMOUNT = "Invalid amount, Please enter a valid amount"
+    let INVALID_DEMON = "Invalid demons amount, Please enter a valid amount"
     
     convenience init(viewModel: DeamonViewModel, delegate: GameFlowViewDelegate) {
         self.init()
@@ -52,12 +52,13 @@ final class DeamonsViewController: UIViewController, Alertable {
             .store(in: &cancellables)
     }
     
-    private func goToGamePreperationPage() {
-        if let amount = Int(viewModel.amount) {
+    public func goToGamePreperationPage() {
+        let demons = viewModel.generateDeamons()
+        if !demons.isEmpty {
             guard let delegate = delegate else { return }
-            delegate.didReceiveDeamons(deamons: amount)
+            delegate.didReceiveDeamons(demons: demons)
         } else {
-            showAlert(message: INVALID_AMOUNT)
+            showAlert(message: INVALID_DEMON)
         }
     }
 }

@@ -16,16 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
        
-        navigationController.setViewControllers([makeGameViewController()], animated: false)
+        navigationController.setViewControllers([GameFlowViewController()], animated: false)
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-    }
-    
-    private func makeGameViewController() -> GameFlowViewController {
-        let viewModel = FightViewModel()
-        let vc = GameFlowViewController(viewModel: viewModel)
-        return vc
     }
 }

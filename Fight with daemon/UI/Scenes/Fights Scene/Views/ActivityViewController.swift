@@ -6,26 +6,29 @@
 //
 
 import UIKit
-import Combine
 
-final class ActivityViewController: UIViewController {
+final class ActivityViewController: UIViewController, Alertable {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var actionButton: UIButton!
     
     private var viewModel: ActivityViewModel!
-    private var cancellables: Set<AnyCancellable> = []
-
+    private var action: ((Result) -> Void)? = nil
+    
     private let padding: CGFloat = 20
     private let headerID = "Header"
     
-    convenience init(viewModel: ActivityViewModel) {
+    convenience init(viewModel: ActivityViewModel, action: @escaping (Result) -> Void) {
         self.init()
         self.viewModel = viewModel
+        self.action = action
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Fight"
+        self.navigationItem.setHidesBackButton(true, animated: false)
         setupCollectionView()
     }
     
@@ -46,6 +49,15 @@ final class ActivityViewController: UIViewController {
     private func setupCollectionHeaderSize() {
         let flow = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         flow.headerReferenceSize = CGSize(width: collectionView.frame.width, height: 30)
+    }
+    
+    @IBAction func actionBtnTapped(_ sender: UIButton) {
+        let fightResult = viewModel.fight()
+        if fightResult.state == .Lose && viewModel.amount > 0 {
+            displayBuyWeaponsSheet(fightResult)
+        } else {
+            continueBattle(fightResult)
+        }
     }
 }
 
@@ -70,7 +82,7 @@ extension ActivityViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DeamonCollectionViewCell.identifier, for: indexPath) as? DeamonCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.deamon = viewModel.deamon
+            cell.deamon = viewModel.demon
             return cell
         }
     }
@@ -108,5 +120,29 @@ extension ActivityViewController: UICollectionViewDelegateFlowLayout {
         
         let width = (collectionView.frame.size.width - padding) / 2
         return CGSize(width: width, height: width)
+    }
+}
+
+extension ActivityViewController {
+    private func continueBattle(_ fightResult: Result) {
+        action?(fightResult)
+    }
+    
+    private func displayWeapons() {
+        
+    }
+    
+    private func displayBuyWeaponsSheet(_ fightResult: Result) {
+        showActionsheet(title: "Info", message: "Looks you have some \(viewModel.amount) amounts, do you want to buy some weapons?", actions: [
+            ("Get new Weapons", .default),
+            ("Continue", .cancel)
+        ]) { [weak self] index in
+            guard let self = self else { return }
+            if index == 0 {
+                self.displayWeapons()
+            } else {
+                self.continueBattle(fightResult)
+            }
+        }
     }
 }

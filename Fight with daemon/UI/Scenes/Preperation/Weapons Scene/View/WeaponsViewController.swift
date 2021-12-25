@@ -84,7 +84,7 @@ final class WeaponsViewController: UIViewController {
         
     @IBAction func startBtnTapped(_ sender: UIButton) {
         guard let delegate = delegate else { return }
-        delegate.didReceiveWeapons(weapons: viewModel.selectedWeapons, amount: viewModel.amount)
+        delegate.didReceiveWeapons(weapons: viewModel.selectedWeapons, remainingAmount: viewModel.amount)
     }
     
     @IBAction func resetBtnTapped(_ sender: UIButton) {

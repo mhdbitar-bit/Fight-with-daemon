@@ -9,18 +9,17 @@ import UIKit
 
 protocol GameFlowViewDelegate: AnyObject {
     func didReceiveAmount(amount: Int)
-    func didReceiveWeapons(weapons: [Weapon], amount: Int)
-    func didReceiveDeamons(deamons: Int)
+    func didReceiveWeapons(weapons: [Weapon], remainingAmount: Int)
+    func didReceiveDeamons(demons: [Deamon])
 }
 
 final class GameFlowViewController: UIViewController {
     
-    private var viewModel: FightViewModel!
+    var battle: Battle?
     
-    convenience init(viewModel: FightViewModel) {
-        self.init()
-        self.viewModel = viewModel
-    }
+    var amount: Int = 0
+    var weapons: [Weapon] = []
+    var demons: [Deamon] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,23 +33,25 @@ final class GameFlowViewController: UIViewController {
 extension GameFlowViewController: GameFlowViewDelegate {
     
     func didReceiveAmount(amount: Int) {
-        viewModel.amount = amount
+        self.amount = amount
         let weaponsViewModel = WeaponsViewModel(amount: amount)
         let vc = WeaponsViewController(viewModel: weaponsViewModel, delegate: self)
         show(vc, sender: self)
     }
     
-    func didReceiveWeapons(weapons: [Weapon], amount: Int) {
-        viewModel.weapons = weapons
-        viewModel.amount = amount
+    func didReceiveWeapons(weapons: [Weapon], remainingAmount: Int) {
+        self.amount = remainingAmount
+        self.weapons = weapons
         let deamonsViewModel = DeamonViewModel()
         let vc = DeamonsViewController(viewModel: deamonsViewModel, delegate: self)
         show(vc, sender: self)
     }
     
-    func didReceiveDeamons(deamons: Int) {
-        viewModel.deamonsCount = deamons
-        let vc = FightsViewController(viewModel: viewModel)
-        show(vc, sender: self)
+    func didReceiveDeamons(demons: [Deamon]) {
+        self.demons = demons
+        let factory = BattleViewControllerFactory(weapons: weapons, demons: demons, amount: amount)
+        let router = BattleNavigationControllerRouter(navigationController: navigationController ?? UINavigationController(), factory: factory)
+        let game = Game(weapons: weapons, demons: demons, amount: amount)
+        battle = Battle.start(game: game, delegate: router)
     }
 }

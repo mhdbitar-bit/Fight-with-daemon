@@ -3,23 +3,25 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="Fight_with_daemon" customModuleProvider="target">
             <connections>
+                <outlet property="actionButton" destination="nM3-Hh-1rL" id="0PA-8k-wvh"/>
                 <outlet property="collectionView" destination="xps-Kx-1X1" id="dIe-ff-wD1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xps-Kx-1X1">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="20" y="44" width="374" height="747"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d1C-h9-mui">
                         <size key="itemSize" width="128" height="128"/>
@@ -28,15 +30,26 @@
                         <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM3-Hh-1rL">
+                    <rect key="frame" x="178.5" y="811" width="57" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Fight"/>
+                    <connections>
+                        <action selector="actionBtnTapped:" destination="-1" eventType="touchUpInside" id="Sb5-JW-7pc"/>
+                    </connections>
+                </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="3vi-b8-ueH"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="xps-Kx-1X1" secondAttribute="bottom" id="0po-ER-005"/>
-                <constraint firstItem="xps-Kx-1X1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Vb-Qm-rvi"/>
-                <constraint firstAttribute="trailing" secondItem="xps-Kx-1X1" secondAttribute="trailing" id="DU5-0l-rcz"/>
-                <constraint firstItem="xps-Kx-1X1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WLC-mO-oqb"/>
+                <constraint firstItem="3vi-b8-ueH" firstAttribute="bottom" secondItem="nM3-Hh-1rL" secondAttribute="bottom" constant="20" id="WHN-5U-rvN"/>
+                <constraint firstItem="xps-Kx-1X1" firstAttribute="leading" secondItem="3vi-b8-ueH" secondAttribute="leading" constant="20" id="ZJ5-ua-CDx"/>
+                <constraint firstItem="3vi-b8-ueH" firstAttribute="trailing" secondItem="xps-Kx-1X1" secondAttribute="trailing" constant="20" id="aB8-K5-cOH"/>
+                <constraint firstItem="nM3-Hh-1rL" firstAttribute="centerX" secondItem="xps-Kx-1X1" secondAttribute="centerX" id="gOe-7f-mV7"/>
+                <constraint firstItem="xps-Kx-1X1" firstAttribute="top" secondItem="3vi-b8-ueH" secondAttribute="top" id="gjY-L3-gc2"/>
+                <constraint firstItem="nM3-Hh-1rL" firstAttribute="top" secondItem="xps-Kx-1X1" secondAttribute="bottom" constant="20" id="tsG-Vb-C22"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="126"/>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
         </view>
     </objects>
     <resources>
