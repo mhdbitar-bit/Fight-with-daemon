@@ -8,19 +8,10 @@
 import UIKit
 
 final class BattleViewControllerFactory: ViewControllerFactory {
-    private let weapons: [Weapon]
-    private let demons: [Deamon]
-    private let amount: Int
     
-    init(weapons: [Weapon], demons: [Deamon], amount: Int) {
-        self.weapons = weapons
-        self.demons = demons
-        self.amount = amount
-    }
-    
-    func activityViewController(for activity: Activity, fightCallBack: @escaping (Result) -> Void) -> UIViewController {
+    func activityViewController(for activity: Activity, continueCallBack: @escaping (Result) -> Void, buyWeaponsCallback: @escaping () -> Void ) -> UIViewController {
         let viewModel = ActivityViewModel(weapons: activity.weapons, demon: activity.demon, amount: activity.amount)
-        let vc = ActivityViewController(viewModel: viewModel, action: fightCallBack)
+        let vc = ActivityViewController(viewModel: viewModel, continueAction: continueCallBack, buyWeaponsAction: buyWeaponsCallback)
         return vc
     }
     

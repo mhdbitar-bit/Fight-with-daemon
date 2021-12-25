@@ -30,7 +30,10 @@ public struct Activity: Equatable {
 }
 
 public protocol BattleDelegate {
-    func fight(for activity: Activity, completion: @escaping (Result) -> Void)
     
+    func fight(for activity: Activity, continueCompletion: @escaping (Result) -> Void, buyWeaponsCompletion: @escaping () -> Void)
+
     func didCompleteBattle(withResults results: [Result])
+    
+    func buyWeapons(amount: Int)
 }

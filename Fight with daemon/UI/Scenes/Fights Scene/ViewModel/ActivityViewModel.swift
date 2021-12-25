@@ -25,7 +25,7 @@ final class ActivityViewModel {
                 state = .Lose
             } else {
                 switch (weapon.power, demon.powers.first) {
-                case (.Water, .Water), (.Fire, .Water), (.Ice, .Water), (.Fire, .Ice):
+                case (.Water, .Water), (.Water, .Fire), (.Ice, .Water), (.Fire, .Ice):
                     state = .Win(weapon)
                     break
                 default:

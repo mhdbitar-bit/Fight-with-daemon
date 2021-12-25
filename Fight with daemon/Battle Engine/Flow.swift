@@ -26,7 +26,7 @@ final class Flow {
             let demon = game.demons[index]
             let weapons = game.weapons
             let activity = Activity(weapons: weapons, demon: demon, amount: game.amount)
-            delegate.fight(for: activity, completion: fightResult(at: index))
+            delegate.fight(for: activity, continueCompletion: fightResult(at: index), buyWeaponsCompletion: showWeapons())
         } else {
             delegate.didCompleteBattle(withResults: results)
         }
@@ -38,11 +38,19 @@ final class Flow {
     
     private func fightResult(at index: Int) -> (Result) -> Void {
         return { [weak self] result in
+            guard let self = self else { return }
             if result.state == .Lose {
-                self?.game.weapons.remove()
+                self.game.weapons.remove()
             }
-            self?.results.insert(result, at: index)
-            self?.delegateFightHandling(after: index)
+            self.results.insert(result, at: index)
+            self.delegateFightHandling(after: index)
+        }
+    }
+    
+    private func showWeapons() -> (() -> Void){
+        return { [weak self] in
+            guard let self = self else { return }
+            self.delegate.buyWeapons(amount: self.game.amount)
         }
     }
 }

@@ -13,15 +13,17 @@ final class ActivityViewController: UIViewController, Alertable {
     @IBOutlet weak var actionButton: UIButton!
     
     private var viewModel: ActivityViewModel!
-    private var action: ((Result) -> Void)? = nil
+    private var continueAction: ((Result) -> Void)? = nil
+    private var buyWeaponsAction: (() -> Void)? = nil
     
     private let padding: CGFloat = 20
     private let headerID = "Header"
     
-    convenience init(viewModel: ActivityViewModel, action: @escaping (Result) -> Void) {
+    convenience init(viewModel: ActivityViewModel, continueAction: @escaping (Result) -> Void, buyWeaponsAction: @escaping (() -> Void)) {
         self.init()
         self.viewModel = viewModel
-        self.action = action
+        self.continueAction = continueAction
+        self.buyWeaponsAction = buyWeaponsAction
     }
     
     override func viewDidLoad() {
@@ -125,11 +127,11 @@ extension ActivityViewController: UICollectionViewDelegateFlowLayout {
 
 extension ActivityViewController {
     private func continueBattle(_ fightResult: Result) {
-        action?(fightResult)
+        continueAction?(fightResult)
     }
     
     private func displayWeapons() {
-        
+        buyWeaponsAction?()
     }
     
     private func displayBuyWeaponsSheet(_ fightResult: Result) {

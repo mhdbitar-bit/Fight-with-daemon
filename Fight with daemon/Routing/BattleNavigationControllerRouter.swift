@@ -16,13 +16,19 @@ final class BattleNavigationControllerRouter: BattleDelegate {
         self.navigationController = navigationController
         self.factory = factory
     }
-    
-    func fight(for activity: Activity, completion: @escaping (Result) -> Void) {
-        show(factory.activityViewController(for: activity, fightCallBack: completion))
+        
+    func fight(for activity: Activity, continueCompletion: @escaping (Result) -> Void, buyWeaponsCompletion: @escaping () -> Void) {
+        show(factory.activityViewController(for: activity, continueCallBack: continueCompletion, buyWeaponsCallback: buyWeaponsCompletion))
     }
     
     func didCompleteBattle(withResults results: [Result]) {
         show(factory.resultsViewController(for: results))
+    }
+    
+    func buyWeapons(amount: Int) {
+        let viewModel = WeaponsViewModel(amount: amount)
+        let vc = WeaponsViewController(viewModel: viewModel, delegate: GameFlowViewController())
+        navigationController.present(vc, animated: true, completion: nil)
     }
     
     private func show(_ viewController: UIViewController) {

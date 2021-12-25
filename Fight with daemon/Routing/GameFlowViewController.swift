@@ -49,7 +49,7 @@ extension GameFlowViewController: GameFlowViewDelegate {
     
     func didReceiveDeamons(demons: [Deamon]) {
         self.demons = demons
-        let factory = BattleViewControllerFactory(weapons: weapons, demons: demons, amount: amount)
+        let factory = BattleViewControllerFactory()
         let router = BattleNavigationControllerRouter(navigationController: navigationController ?? UINavigationController(), factory: factory)
         let game = Game(weapons: weapons, demons: demons, amount: amount)
         battle = Battle.start(game: game, delegate: router)

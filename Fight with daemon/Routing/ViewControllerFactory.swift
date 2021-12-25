@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ViewControllerFactory {    
-    func activityViewController(for activity: Activity, fightCallBack: @escaping (Result) -> Void) -> UIViewController
+protocol ViewControllerFactory {
+    func activityViewController(for activity: Activity, continueCallBack: @escaping (Result) -> Void, buyWeaponsCallback: @escaping () -> Void ) -> UIViewController
     func resultsViewController(for results: [Result]) -> UIViewController
 }
