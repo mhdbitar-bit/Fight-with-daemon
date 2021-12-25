@@ -24,14 +24,15 @@
 		4C40497D2774A669005DAF79 /* DeamonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40497B2774A669005DAF79 /* DeamonCollectionViewCell.swift */; };
 		4C40497E2774A669005DAF79 /* DeamonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C40497C2774A669005DAF79 /* DeamonCollectionViewCell.xib */; };
 		4C4B7BB72776F6CF000E2FDE /* BattleResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BB62776F6CF000E2FDE /* BattleResultViewModel.swift */; };
-		4C4B7BB92776FB7C000E2FDE /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BB82776FB7C000E2FDE /* ResultPresenter.swift */; };
 		4C4B7BBD2776FEBE000E2FDE /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BBC2776FEBE000E2FDE /* ViewControllerFactory.swift */; };
 		4C4B7BBF2777001D000E2FDE /* BattleNavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BBE2777001D000E2FDE /* BattleNavigationControllerRouter.swift */; };
 		4C4B7BC1277700D6000E2FDE /* BattleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BC0277700D6000E2FDE /* BattleDelegate.swift */; };
 		4C4B7BC327770484000E2FDE /* BattleViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BC227770484000E2FDE /* BattleViewControllerFactory.swift */; };
 		4C4B7BC5277712F5000E2FDE /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BC4277712F5000E2FDE /* Battle.swift */; };
 		4C4B7BC727771364000E2FDE /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BC627771364000E2FDE /* Flow.swift */; };
-		4C4B7BCA27772463000E2FDE /* ActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BC927772463000E2FDE /* ActivityPresenter.swift */; };
+		4C4B7BD9277792F6000E2FDE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BD8277792F6000E2FDE /* Game.swift */; };
+		4C4B7BDB2777930F000E2FDE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BDA2777930F000E2FDE /* Result.swift */; };
+		4C4B7BDD2777931D000E2FDE /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BDC2777931D000E2FDE /* Activity.swift */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -69,14 +70,15 @@
 		4C40497B2774A669005DAF79 /* DeamonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeamonCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C40497C2774A669005DAF79 /* DeamonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeamonCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C4B7BB62776F6CF000E2FDE /* BattleResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewModel.swift; sourceTree = "<group>"; };
-		4C4B7BB82776FB7C000E2FDE /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		4C4B7BBC2776FEBE000E2FDE /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		4C4B7BBE2777001D000E2FDE /* BattleNavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNavigationControllerRouter.swift; sourceTree = "<group>"; };
 		4C4B7BC0277700D6000E2FDE /* BattleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDelegate.swift; sourceTree = "<group>"; };
 		4C4B7BC227770484000E2FDE /* BattleViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewControllerFactory.swift; sourceTree = "<group>"; };
 		4C4B7BC4277712F5000E2FDE /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		4C4B7BC627771364000E2FDE /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		4C4B7BC927772463000E2FDE /* ActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPresenter.swift; sourceTree = "<group>"; };
+		4C4B7BD8277792F6000E2FDE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4C4B7BDA2777930F000E2FDE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4C4B7BDC2777931D000E2FDE /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,7 +204,6 @@
 		4C4B7BBB2776FE33000E2FDE /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				4C40496F27746D90005DAF79 /* GameFlowViewController.swift */,
 				4C4B7BBC2776FEBE000E2FDE /* ViewControllerFactory.swift */,
 				4C4B7BBE2777001D000E2FDE /* BattleNavigationControllerRouter.swift */,
 			);
@@ -212,9 +213,9 @@
 		4C4B7BC827772241000E2FDE /* Battle Engine */ = {
 			isa = PBXGroup;
 			children = (
+				4C4B7BC627771364000E2FDE /* Flow.swift */,
 				4C4B7BC0277700D6000E2FDE /* BattleDelegate.swift */,
 				4C4B7BC4277712F5000E2FDE /* Battle.swift */,
-				4C4B7BC627771364000E2FDE /* Flow.swift */,
 			);
 			path = "Battle Engine";
 			sourceTree = "<group>";
@@ -240,9 +241,9 @@
 			children = (
 				4C4B7BC827772241000E2FDE /* Battle Engine */,
 				4C4B7BBB2776FE33000E2FDE /* Routing */,
-				4CF1FC8727738EC000CB2060 /* Presentation */,
+				4CF1FC8727738EC000CB2060 /* Domain */,
 				4CDB8EEF277104ED009489A5 /* UI */,
-				4CDB8EF427710527009489A5 /* Application */,
+				4CDB8EF427710527009489A5 /* Main */,
 				4CDB8EDA2770F5BA009489A5 /* Info.plist */,
 				4CDB8EF72771055C009489A5 /* Resources */,
 			);
@@ -325,14 +326,15 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		4CDB8EF427710527009489A5 /* Application */ = {
+		4CDB8EF427710527009489A5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */,
 				4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */,
+				4C40496F27746D90005DAF79 /* GameFlowViewController.swift */,
 				4C4B7BC227770484000E2FDE /* BattleViewControllerFactory.swift */,
 			);
-			path = Application;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		4CDB8EF527710539009489A5 /* LunchScene */ = {
@@ -359,16 +361,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4CF1FC8727738EC000CB2060 /* Presentation */ = {
+		4CF1FC8727738EC000CB2060 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				4CDB8EFE277110AF009489A5 /* Weapon.swift */,
 				4CF1FC912773A70300CB2060 /* Deamon.swift */,
 				4CF1FC932773A71B00CB2060 /* Power.swift */,
-				4C4B7BB82776FB7C000E2FDE /* ResultPresenter.swift */,
-				4C4B7BC927772463000E2FDE /* ActivityPresenter.swift */,
+				4C4B7BD8277792F6000E2FDE /* Game.swift */,
+				4C4B7BDA2777930F000E2FDE /* Result.swift */,
+				4C4B7BDC2777931D000E2FDE /* Activity.swift */,
 			);
-			path = Presentation;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		4CF1FC8827739B4300CB2060 /* Daemon Count */ = {
@@ -476,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4B7BDD2777931D000E2FDE /* Activity.swift in Sources */,
 				4C184FEF27723D3800CE1CFF /* UICollectionViewCell+Extension.swift in Sources */,
 				4CF1FC922773A70300CB2060 /* Deamon.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
@@ -492,13 +496,12 @@
 				4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */,
 				4C404975277490B4005DAF79 /* BattleResultsViewController.swift in Sources */,
 				4C4B7BC327770484000E2FDE /* BattleViewControllerFactory.swift in Sources */,
-				4C4B7BB92776FB7C000E2FDE /* ResultPresenter.swift in Sources */,
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
 				4C184FE92772395700CE1CFF /* WeaponsViewModel.swift in Sources */,
 				4C4B7BB72776F6CF000E2FDE /* BattleResultViewModel.swift in Sources */,
 				4C4B7BC727771364000E2FDE /* Flow.swift in Sources */,
 				4CF1FC8D27739CB900CB2060 /* DeamonsViewController.swift in Sources */,
-				4C4B7BCA27772463000E2FDE /* ActivityPresenter.swift in Sources */,
+				4C4B7BDB2777930F000E2FDE /* Result.swift in Sources */,
 				4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */,
 				4C184FF12772475C00CE1CFF /* UIView+Extension.swift in Sources */,
 				4C184FE6277235F000CE1CFF /* WeaponsViewController.swift in Sources */,
@@ -509,6 +512,7 @@
 				4CDB8EE82771029B009489A5 /* UITextField+Publisher.swift in Sources */,
 				4CF1FC942773A71B00CB2060 /* Power.swift in Sources */,
 				4CDB8EE22770FC3C009489A5 /* AmountViewController.swift in Sources */,
+				4C4B7BD9277792F6000E2FDE /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

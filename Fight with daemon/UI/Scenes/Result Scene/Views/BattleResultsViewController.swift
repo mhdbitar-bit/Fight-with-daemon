@@ -44,7 +44,7 @@ final class BattleResultsViewController: UIViewController {
     }
     
     @IBAction func repeatBtnTapped(_ sender: UIButton) {
-        navigationController?.setViewControllers([GameFlowViewController()], animated: false)
+        navigationController?.setViewControllers([BattlePreperationFlowViewController()], animated: false)
     }
     
     @IBAction func showDeamonsBtnTapped(_ sender: UIButton) {
