@@ -25,8 +25,8 @@ final class BattleNavigationControllerRouter: BattleDelegate {
         show(factory.activityViewController(for: activity, continueCallBack: continueCompletion, buyWeaponsCallback: buyWeaponsCompletion))
     }
     
-    func didCompleteBattle(withResults results: [Result]) {
-        show(factory.resultsViewController(for: results))
+    func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon]) {
+        show(factory.resultsViewController(for: results, remaingWeapons: remaingWeapons))
     }
     
     func buyWeapons(amount: Int) {

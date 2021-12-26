@@ -10,25 +10,30 @@ import Combine
 
 final class BattleResultViewModel {
     private let battleResults: [Result]
+    private let remaingWeapons: [Weapon]
     
+    @Published var killedDemons: [Deamon] = []
+    @Published var weapons: [Weapon] = []
+    @Published var isFightWon: Bool = false
     
-    init(battleResults: [Result]) {
+    init(battleResults: [Result], remaingWeapons: [Weapon]) {
         self.battleResults = battleResults
+        self.remaingWeapons = remaingWeapons
     }
     
-    func getResults() -> (result: Bool, killedDemons: [Deamon], weapons: [Weapon]) {
+    func getResults() {
         var killedDemons: [Deamon] = []
-        var weapons: [Weapon] = []
         var fightWon = 0
+        
         for result in battleResults {
-//            if result.state == .Win {
-//                fightWon += 1
-//                killedDemons.append(result.demon)
-//            }
-//            weapons.append(result.)
+            if result.state == .Win {
+                fightWon += 1
+                killedDemons.append(result.demon)
+            }
         }
         
-        let result = fightWon > (battleResults.count - fightWon)
-        return (result: result, killedDemons: killedDemons, weapons: weapons)
+        self.killedDemons = killedDemons
+        self.weapons = remaingWeapons
+        self.isFightWon = fightWon > (battleResults.count - fightWon)
     }
 }

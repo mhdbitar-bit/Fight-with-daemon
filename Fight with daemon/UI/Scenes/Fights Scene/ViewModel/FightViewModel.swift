@@ -24,7 +24,7 @@ final class FightViewModel {
             state = .Lose
         } else {
             switch (weapon.power, demon.powers.first) {
-            case (.Water, .Water), (.Water, .Fire), (.Ice, .Water), (.Fire, .Ice):
+            case (.Water, .Water), (.Fire, .Fire), (.Ice, .Ice), (.Water, .Fire), (.Ice, .Water), (.Fire, .Ice):
                 state = .Win
             default:
                 state = .Lose

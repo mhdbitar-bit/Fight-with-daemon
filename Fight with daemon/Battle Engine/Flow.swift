@@ -25,7 +25,7 @@ final class Flow {
         if index < game.demons.endIndex && !game.weapons.isEmpty {
             delegate.selectWeapon(for: game.weapons, completion: startFighiting(index))
         } else {
-            delegate.didCompleteBattle(withResults: results)
+            delegate.didCompleteBattle(withResults: results, remaingWeapons: game.weapons)
         }
     }
     

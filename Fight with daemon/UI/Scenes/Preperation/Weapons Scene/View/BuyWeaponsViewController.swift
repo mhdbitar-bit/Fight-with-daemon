@@ -46,10 +46,6 @@ final class BuyWeaponsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(WeaponCollectionViewCell.self)
-//        collectionView.register(
-//            WeaponCollectionViewCell.nib,
-//            forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier
-//        )
         collectionView.allowsSelection = true
         collectionView.allowsMultipleSelection = true
         collectionView.reloadData()
