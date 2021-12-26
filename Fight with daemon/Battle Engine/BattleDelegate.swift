@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol BattleDelegate {
-    func selectWeapon(for weapons: [Weapon], completion: @escaping (Weapon) -> Void)
+    func selectWeapon(for weapons: [Weapon], completion: @escaping ([Weapon]) -> Void)
     func fight(for activity: Activity, continueCompletion: @escaping (Result) -> Void, buyWeaponsCompletion: @escaping () -> Void)
     func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon], weaponsCallback: @escaping (() -> Void), demonsCallback: @escaping (([Deamon]) -> Void))
     func showReamaingWeapons(for weapons: [Weapon])

@@ -48,13 +48,13 @@ final class Flow {
         }
     }
     
-    private func startFighiting(_ index: Int) -> (Weapon) -> Void {
-        return { [weak self] weapon in
+    private func startFighiting(_ index: Int) -> ([Weapon]) -> Void {
+        return { [weak self] weapons in
             guard let self = self else { return }
             let game = self.game
             let demon = game.demons[index]
             let amount = game.amount
-            let activity = Activity(weapon: weapon, demon: demon, amount: amount)
+            let activity = Activity(weapons: weapons, demon: demon, amount: amount)
             self.delegate.fight(
                 for: activity,
                    continueCompletion: self.fightResult(at: index),
@@ -72,7 +72,7 @@ final class Flow {
             guard let self = self else { return }
             self.results.insert(result, at: index)
             if result.state == .Lose {
-                self.game.weapons = self.game.weapons.filter { $0 != result.weapon }
+                self.game.weapons = self.game.weapons.filter { !result.weapons.contains($0) }
                 self.delegateFightHandling(at: index)
             } else {
                 self.delegateFightHandling(after: index)

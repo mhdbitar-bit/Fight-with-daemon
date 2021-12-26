@@ -20,28 +20,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-gY-F0d">
-                    <rect key="frame" x="20" y="138" width="374" height="724"/>
+                    <rect key="frame" x="20" y="138" width="374" height="653"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jCY-EZ-SVk"/>
                         <outlet property="delegate" destination="-1" id="6Eu-ox-SBx"/>
                     </connections>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a weapon to start the battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVB-aG-UdU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select weapons to start fighting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVB-aG-UdU">
                     <rect key="frame" x="20" y="64" width="374" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8M-DE-cUQ">
+                    <rect key="frame" x="179" y="811" width="56" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                    <connections>
+                        <action selector="startBtnTapped:" destination="-1" eventType="touchUpInside" id="P4z-kO-FvD"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="V8M-DE-cUQ" secondAttribute="bottom" constant="20" id="1c1-tb-5sh"/>
+                <constraint firstItem="V8M-DE-cUQ" firstAttribute="centerX" secondItem="bpL-gY-F0d" secondAttribute="centerX" id="88f-wt-Quq"/>
                 <constraint firstItem="bpL-gY-F0d" firstAttribute="leading" secondItem="IVB-aG-UdU" secondAttribute="leading" id="A1S-N6-lar"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bpL-gY-F0d" secondAttribute="bottom" id="DXH-qr-7M6"/>
                 <constraint firstItem="IVB-aG-UdU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Nw2-Dk-vHG"/>
                 <constraint firstItem="IVB-aG-UdU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="O5b-KQ-muq"/>
                 <constraint firstItem="bpL-gY-F0d" firstAttribute="top" secondItem="IVB-aG-UdU" secondAttribute="bottom" constant="50" id="mhN-MA-J4r"/>
+                <constraint firstItem="V8M-DE-cUQ" firstAttribute="top" secondItem="bpL-gY-F0d" secondAttribute="bottom" constant="20" id="nac-iB-ClJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVB-aG-UdU" secondAttribute="trailing" constant="20" id="oUt-cR-fYP"/>
                 <constraint firstItem="bpL-gY-F0d" firstAttribute="trailing" secondItem="IVB-aG-UdU" secondAttribute="trailing" id="yr1-ts-w40"/>
             </constraints>

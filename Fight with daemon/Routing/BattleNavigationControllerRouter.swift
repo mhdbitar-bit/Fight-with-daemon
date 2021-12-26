@@ -17,7 +17,7 @@ final class BattleNavigationControllerRouter: BattleDelegate {
         self.factory = factory
     }
     
-    func selectWeapon(for weapons: [Weapon], completion: @escaping (Weapon) -> Void) {
+    func selectWeapon(for weapons: [Weapon], completion: @escaping ([Weapon]) -> Void) {
         show(factory.weaponsViewController(for: weapons, callback: completion))
     }
             

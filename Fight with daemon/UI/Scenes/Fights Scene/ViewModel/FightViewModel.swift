@@ -8,29 +8,41 @@
 import Foundation
 
 final class FightViewModel {
-    var weapon: Weapon
+    var weapons: [Weapon]
     var demon: Deamon
     var amount: Int
     
-    init(weapon: Weapon, demon: Deamon, amount: Int) {
-        self.weapon = weapon
+    init(weapons: [Weapon], demon: Deamon, amount: Int) {
+        self.weapons = weapons
         self.demon = demon
         self.amount = amount
     }
     
     public func fight() -> Result {
         var state: Result.FightSate = .Lose
-        if demon.powers.count > 1 {
-            state = .Lose
+        let weaponPowers = weapons.compactMap { $0.power }
+        if weaponPowers.hasCommonElements(with: demon.powers) {
+            state = .Win
         } else {
-            switch (weapon.power, demon.powers.first) {
-            case (.Water, .Water), (.Fire, .Fire), (.Ice, .Ice), (.Magnet, .Magnet), (.Water, .Fire), (.Ice, .Water), (.Fire, .Ice):
-                state = .Win
-            default:
-                state = .Lose
-            }
+            state = .Lose
         }
         
-        return Result(weapon: weapon, demon: demon, state: state)
+        return Result(weapons: weapons, demon: demon, state: state)
+    }
+}
+
+private extension Array where Element: Hashable {
+
+    func set() -> Set<Array.Element> {
+        return Set(self)
+    }
+    
+    func commonElements(between array: Array) -> Array {
+        let intersection = self.set().intersection(array.set())
+        return intersection.map({ $0 })
+    }
+
+    func hasCommonElements(with array: Array) -> Bool {
+        return self.commonElements(between: array).count >= 1 ? true : false
     }
 }

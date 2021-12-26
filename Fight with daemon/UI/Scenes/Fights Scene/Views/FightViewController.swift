@@ -9,7 +9,7 @@ import UIKit
 
 final class FightViewController: UIViewController, Alertable, Lodable {
     
-    @IBOutlet weak var weaponView: WeaponView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var demonView: DemonView!
         
     private var viewModel: FightViewModel!
@@ -32,7 +32,7 @@ final class FightViewController: UIViewController, Alertable, Lodable {
         
         self.title = "Fight"
         self.navigationItem.setHidesBackButton(true, animated: false)
-        weaponView.weapon = viewModel.weapon
+        collectionView.register(WeaponCollectionViewCell.self)
         demonView.deamon = viewModel.demon
     }
         
@@ -43,6 +43,38 @@ final class FightViewController: UIViewController, Alertable, Lodable {
         } else {
             continueToNextFight(result: fightResult)
         }
+    }
+}
+
+extension FightViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.weapons.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else {
+            return UICollectionViewCell()
+        }
+        cell.configure(weapon: viewModel.weapons[indexPath.row], with: false)
+        return cell
+    }
+}
+
+extension FightViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return padding
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return padding
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = (collectionView.frame.size.width - padding) / 2
+        return CGSize(width: width, height: width)
     }
 }
 
@@ -57,7 +89,7 @@ extension FightViewController {
     
     private func continueToNextFight(result: Result) {
         self.showSpinner()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
             guard let self = self else { return }
             self.hideSpinner()
             var message = ""
@@ -75,7 +107,6 @@ extension FightViewController {
                     self.continueBattle(result)
                 } else {
                     self.displayWeapons()
-//                    self.navigationController?.setViewControllers([BattlePreperationFlowViewController()], animated: false)
                 }
             }
         }

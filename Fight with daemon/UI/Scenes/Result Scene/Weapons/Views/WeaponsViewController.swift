@@ -7,14 +7,15 @@
 
 import UIKit
 
-final class WeaponsViewController: UIViewController {
+final class WeaponsViewController: UIViewController, Alertable {
 
     @IBOutlet weak var tableView: UITableView!
     
     private(set) var weapons = [Weapon]()
-    private var selection: ((Weapon) -> Void)? = nil
+    private var selection: (([Weapon]) -> Void)? = nil
+    private var selectedWeapons: [Weapon] = []
     
-    convenience init(weapons: [Weapon], selection: @escaping ((Weapon) -> Void)) {
+    convenience init(weapons: [Weapon], selection: @escaping (([Weapon]) -> Void)) {
         self.init()
         self.weapons = weapons
         self.selection = selection
@@ -26,7 +27,18 @@ final class WeaponsViewController: UIViewController {
         self.title = "Weapons"
         self.navigationItem.setHidesBackButton(true, animated: false)
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.allowsMultipleSelection = true
         tableView.register(WeaponTableViewCell.self)
+    }
+    
+    @IBAction func startBtnTapped(_ sender: UIButton) {
+        if selectedWeapons.isEmpty {
+            showAlert(message: "Select at least one weapon to start")
+        } else {
+            if let selection = selection {
+                selection(selectedWeapons)
+            }
+        }
     }
 }
 
@@ -47,8 +59,10 @@ extension WeaponsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selection = selection {
-            selection(weapons[indexPath.row])
-        }
+        selectedWeapons.append(weapons[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        selectedWeapons = selectedWeapons.filter { $0.name != weapons[indexPath.row].name }
     }
 }
