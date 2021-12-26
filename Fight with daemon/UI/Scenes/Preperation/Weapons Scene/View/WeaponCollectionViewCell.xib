@@ -22,14 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-rY-MW2">
                                 <rect key="frame" x="0.0" y="0.0" width="241" height="229"/>
                                 <subviews>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NTg-YR-IaD">
-                                        <rect key="frame" x="0.0" y="0.5" width="40" height="39"/>
-                                        <color key="tintColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="NTg-YR-IaD" secondAttribute="height" multiplier="1:1" id="E2F-qM-6zt"/>
-                                            <constraint firstAttribute="height" constant="40" id="Plf-AD-KST"/>
-                                        </constraints>
-                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pvi-pi-YNC">
                                         <rect key="frame" x="60.5" y="8" width="120.5" height="120.5"/>
                                         <constraints>
@@ -57,8 +49,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dBX-uT-JsC" secondAttribute="bottom" constant="8" id="Gtt-fU-JBy"/>
-                                    <constraint firstItem="NTg-YR-IaD" firstAttribute="top" secondItem="bq5-rY-MW2" secondAttribute="top" id="Hoa-ME-EgW"/>
-                                    <constraint firstItem="NTg-YR-IaD" firstAttribute="leading" secondItem="bq5-rY-MW2" secondAttribute="leading" id="M7L-j8-oIA"/>
                                     <constraint firstItem="Pvi-pi-YNC" firstAttribute="top" secondItem="bq5-rY-MW2" secondAttribute="top" constant="8" id="Uhe-v7-Jbc"/>
                                     <constraint firstItem="Pvi-pi-YNC" firstAttribute="width" secondItem="bq5-rY-MW2" secondAttribute="width" multiplier="0.5" id="VO1-Ex-MHM"/>
                                     <constraint firstItem="dBX-uT-JsC" firstAttribute="top" secondItem="Pvi-pi-YNC" secondAttribute="bottom" constant="8" id="Wry-5Q-1VK"/>
@@ -87,7 +77,6 @@
             </constraints>
             <size key="customSize" width="241" height="229"/>
             <connections>
-                <outlet property="checkImage" destination="NTg-YR-IaD" id="tUO-ss-Vwn"/>
                 <outlet property="containerView" destination="bq5-rY-MW2" id="jlp-XF-Fet"/>
                 <outlet property="weaponImage" destination="Pvi-pi-YNC" id="Bq3-7R-hDS"/>
                 <outlet property="weaponNameLabel" destination="vyI-iP-drT" id="XrB-HR-IQn"/>
@@ -97,7 +86,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

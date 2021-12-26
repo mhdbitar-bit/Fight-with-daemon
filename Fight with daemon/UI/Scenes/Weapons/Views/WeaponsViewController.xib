@@ -20,21 +20,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-gY-F0d">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="20" y="144" width="374" height="718"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jCY-EZ-SVk"/>
                         <outlet property="delegate" destination="-1" id="6Eu-ox-SBx"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a weapon to start the battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVB-aG-UdU">
+                    <rect key="frame" x="20" y="64" width="374" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="bpL-gY-F0d" firstAttribute="leading" secondItem="IVB-aG-UdU" secondAttribute="leading" id="A1S-N6-lar"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bpL-gY-F0d" secondAttribute="bottom" id="DXH-qr-7M6"/>
-                <constraint firstItem="bpL-gY-F0d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SQZ-SO-ZSN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bpL-gY-F0d" secondAttribute="trailing" id="bOE-hY-LBO"/>
-                <constraint firstItem="bpL-gY-F0d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="htb-F3-7NO"/>
+                <constraint firstItem="IVB-aG-UdU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Nw2-Dk-vHG"/>
+                <constraint firstItem="IVB-aG-UdU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="O5b-KQ-muq"/>
+                <constraint firstItem="bpL-gY-F0d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="htb-F3-7NO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVB-aG-UdU" secondAttribute="trailing" constant="20" id="oUt-cR-fYP"/>
+                <constraint firstItem="bpL-gY-F0d" firstAttribute="trailing" secondItem="IVB-aG-UdU" secondAttribute="trailing" id="yr1-ts-w40"/>
             </constraints>
             <point key="canvasLocation" x="132" y="76"/>
         </view>

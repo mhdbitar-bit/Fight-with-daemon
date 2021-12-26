@@ -8,32 +8,30 @@
 import Foundation
 
 final class ActivityViewModel {
-    var weapons: [Weapon]
+    var weapon: Weapon
     var demon: Deamon
     var amount: Int
     
-    init(weapons: [Weapon], demon: Deamon, amount: Int) {
-        self.weapons = weapons
+    init(weapon: Weapon, demon: Deamon, amount: Int) {
+        self.weapon = weapon
         self.demon = demon
         self.amount = amount
     }
     
     public func fight() -> Result {
         var state: Result.FightSate = .Lose
-        for weapon in weapons {
-            if demon.powers.count > 1 {
+        if demon.powers.count > 1 {
+            state = .Lose
+        } else {
+            switch (weapon.power, demon.powers.first) {
+            case (.Water, .Water), (.Water, .Fire), (.Ice, .Water), (.Fire, .Ice):
+                state = .Win(weapon)
+                break
+            default:
                 state = .Lose
-            } else {
-                switch (weapon.power, demon.powers.first) {
-                case (.Water, .Water), (.Water, .Fire), (.Ice, .Water), (.Fire, .Ice):
-                    state = .Win(weapon)
-                    break
-                default:
-                    state = .Lose
-                }
             }
         }
         
-        return Result(weapons: weapons, demon: demon, state: state)
+        return Result(weapon: weapon, demon: demon, state: state)
     }
 }

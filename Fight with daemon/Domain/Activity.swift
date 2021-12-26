@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Activity: Equatable {
-    let weapons: [Weapon]
+    let weapon: Weapon
     let demon: Deamon
     let amount: Int
 }

@@ -70,7 +70,7 @@ extension ActivityViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? viewModel.weapons.count : 1
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,7 +78,7 @@ extension ActivityViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
-            cell.weapon = viewModel.weapons[indexPath.row]
+            cell.weapon = viewModel.weapon
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(DeamonCollectionViewCell.self, indexPath: indexPath) else {

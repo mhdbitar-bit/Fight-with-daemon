@@ -23,12 +23,24 @@ final class Flow {
     
     private func delegateFightHandling(at index: Int) {
         if index < game.demons.endIndex && !game.weapons.isEmpty {
-            let demon = game.demons[index]
-            let weapons = game.weapons
-            let activity = Activity(weapons: weapons, demon: demon, amount: game.amount)
-            delegate.fight(for: activity, continueCompletion: fightResult(at: index), buyWeaponsCompletion: showWeapons())
+            delegate.selectWeapon(for: game.weapons, completion: startFighiting(index))
         } else {
             delegate.didCompleteBattle(withResults: results)
+        }
+    }
+    
+    private func startFighiting(_ index: Int) -> (Weapon) -> Void {
+        return { [weak self] weapon in
+            guard let self = self else { return }
+            let game = self.game
+            let demon = game.demons[index]
+            let amount = game.amount
+            let activity = Activity(weapon: weapon, demon: demon, amount: amount)
+            self.delegate.fight(
+                for: activity,
+                continueCompletion: self.fightResult(at: index),
+                buyWeaponsCompletion: self.showWeapons()
+            )
         }
     }
     

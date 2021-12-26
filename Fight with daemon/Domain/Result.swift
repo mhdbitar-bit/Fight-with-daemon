@@ -12,7 +12,7 @@ public struct Result {
         case Win(Weapon)
         case Lose
     }
-    let weapons: [Weapon]
+    let weapon: Weapon
     let demon: Deamon
     let state: FightSate
 }
