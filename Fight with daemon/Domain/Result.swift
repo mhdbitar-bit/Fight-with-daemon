@@ -9,7 +9,7 @@ import Foundation
 
 public struct Result {
     enum FightSate: Equatable {
-        case Win(Weapon)
+        case Win
         case Lose
     }
     let weapon: Weapon
