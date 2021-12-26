@@ -40,10 +40,9 @@ final class BattleNavigationControllerRouter: BattleDelegate {
         present(factory.demonsviewController(for: demons))
     }
     
-    func buyWeapons(amount: Int) {
-//        let viewModel = WeaponsViewModel(amount: amount)
-//        let vc = WeaponsViewController(viewModel: viewModel, delegate: BattlePreperationFlowViewController())
-//        navigationController.present(vc, animated: true, completion: nil)
+    func buyWeapons(amount: Int, callback: @escaping (([Weapon], Int) -> Void)) {
+        let viewModel = BuyWeaponsViewModel(amount: amount)
+        present(factory.buyWeaponsViewController(for: viewModel, callback: callback))
     }
     
     private func show(_ viewController: UIViewController) {

@@ -29,4 +29,10 @@ final class BattleViewControllerFactory: ViewControllerFactory {
         let vc = BattleResultsViewController(viewModel: viewModel, weaponsCallback: weaponsCallback, demonsCallback: demonsCallback)
         return vc
     }
+    
+    func buyWeaponsViewController(for viewModel: BuyWeaponsViewModel, callback: @escaping (([Weapon], Int) -> Void)) -> UIViewController {
+        let vc = BuyWeaponsViewController(viewModel: viewModel, callback: callback)
+        vc.modalPresentationStyle = .fullScreen
+        return vc
+    }
 }

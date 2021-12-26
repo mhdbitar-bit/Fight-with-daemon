@@ -10,5 +10,5 @@ import Foundation
 public struct Game {
     var weapons: [Weapon]
     let demons: [Deamon]
-    let amount: Int
+    var amount: Int
 }

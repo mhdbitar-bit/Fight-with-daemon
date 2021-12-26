@@ -58,7 +58,7 @@ final class Flow {
             self.delegate.fight(
                 for: activity,
                    continueCompletion: self.fightResult(at: index),
-                   buyWeaponsCompletion: self.showWeapons()
+                   buyWeaponsCompletion: self.showWeapons(at: index)
             )
         }
     }
@@ -80,10 +80,14 @@ final class Flow {
         }
     }
     
-    private func showWeapons() -> (() -> Void){
+    private func showWeapons(at index: Int) -> (() -> Void) {
         return { [weak self] in
             guard let self = self else { return }
-            self.delegate.buyWeapons(amount: self.game.amount)
+            self.delegate.buyWeapons(amount: self.game.amount) { (weapons, amount)  in
+                self.game.weapons = [self.game.weapons, weapons].flatMap { $0 }
+                self.game.amount = amount
+                self.delegateFightHandling(at: index)
+            }
         }
     }
 }

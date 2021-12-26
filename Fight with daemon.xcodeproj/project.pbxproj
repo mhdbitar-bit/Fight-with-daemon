@@ -190,8 +190,9 @@
 		4C4049712774909D005DAF79 /* Result Scene */ = {
 			isa = PBXGroup;
 			children = (
-				4C4B7BB52776F6C4000E2FDE /* ViewModel */,
-				4C404972277490A3005DAF79 /* Views */,
+				4C81A30F277873A0003485D2 /* Demons */,
+				4C81A2FE27784172003485D2 /* Weapons */,
+				4C81A3232778AAD9003485D2 /* Result */,
 			);
 			path = "Result Scene";
 			sourceTree = "<group>";
@@ -282,6 +283,15 @@
 				4C81A3212778905E003485D2 /* DemonView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4C81A3232778AAD9003485D2 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				4C4B7BB52776F6C4000E2FDE /* ViewModel */,
+				4C404972277490A3005DAF79 /* Views */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		4CDB8EC02770F5B9009489A5 = {
@@ -383,8 +393,6 @@
 		4CDB8EF32771051E009489A5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4C81A30F277873A0003485D2 /* Demons */,
-				4C81A2FE27784172003485D2 /* Weapons */,
 				4CDB8EF527710539009489A5 /* LunchScene */,
 				4C4B7BBA2776FE1F000E2FDE /* Preperation */,
 				4C061573277627C9009C6C08 /* Fights Scene */,

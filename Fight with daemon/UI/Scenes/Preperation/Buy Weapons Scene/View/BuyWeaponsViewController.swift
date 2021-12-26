@@ -22,20 +22,22 @@ final class BuyWeaponsViewController: UIViewController, Alertable {
     
     private var viewModel: BuyWeaponsViewModel!
     private var delegate: GameFlowViewDelegate?
+    private var callback: (([Weapon], Int) -> Void)?
     private var cancellables: Set<AnyCancellable> = []
     private let padding: CGFloat = 20
     
-    convenience init(viewModel: BuyWeaponsViewModel, delegate: GameFlowViewDelegate) {
+    convenience init(viewModel: BuyWeaponsViewModel, delegate: GameFlowViewDelegate? = nil, callback: (([Weapon], Int) -> Void)? = nil) {
         self.init()
         self.viewModel = viewModel
         self.delegate = delegate
+        self.callback = callback
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = viewModel.title
-        
+    
         setupCollectionView()
         
         viewModel.fetchWeapons()
@@ -78,10 +80,16 @@ final class BuyWeaponsViewController: UIViewController, Alertable {
             self.startButton.isEnabled = !weapons.isEmpty
         }.store(in: &cancellables)
     }
-        
+    
     @IBAction func startBtnTapped(_ sender: UIButton) {
-        guard let delegate = delegate else { return }
-        delegate.didReceiveWeapons(weapons: viewModel.selectedWeapons, remainingAmount: viewModel.amount)
+        if let delegate = delegate {
+            delegate.didReceiveWeapons(weapons: viewModel.selectedWeapons, remainingAmount: viewModel.amount)
+        } else {
+            dismiss(animated: true) { [weak self] in
+                guard let self = self else { return }
+                self.callback?(self.viewModel.selectedWeapons, self.viewModel.amount)
+            }
+        }
     }
     
     @IBAction func resetBtnTapped(_ sender: UIButton) {
@@ -110,7 +118,7 @@ extension BuyWeaponsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else { return UICollectionViewCell() }        
+        guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else { return UICollectionViewCell() }
         cell.configure(weapon: viewModel.weapons[indexPath.row])
         cell.addBtn.tag = indexPath.row
         cell.removeBtn.tag = indexPath.row

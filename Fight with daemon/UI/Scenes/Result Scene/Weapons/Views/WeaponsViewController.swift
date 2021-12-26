@@ -24,6 +24,7 @@ final class WeaponsViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Weapons"
+        self.navigationItem.setHidesBackButton(true, animated: false)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(WeaponTableViewCell.self)
     }

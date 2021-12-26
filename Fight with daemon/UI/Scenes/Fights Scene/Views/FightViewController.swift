@@ -74,7 +74,8 @@ extension FightViewController {
                 if index == 0 {
                     self.continueBattle(result)
                 } else {
-                    self.navigationController?.setViewControllers([BattlePreperationFlowViewController()], animated: false)
+                    self.displayWeapons()
+//                    self.navigationController?.setViewControllers([BattlePreperationFlowViewController()], animated: false)
                 }
             }
         }

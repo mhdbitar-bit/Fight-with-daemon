@@ -12,4 +12,5 @@ protocol ViewControllerFactory {
     func activityViewController(for activity: Activity, continueCallBack: @escaping (Result) -> Void, buyWeaponsCallback: @escaping () -> Void ) -> UIViewController
     func resultsViewController(for results: [Result], remaingWeapons: [Weapon], weaponsCallback: @escaping (() -> Void), demonsCallback: @escaping (([Deamon]) -> Void)) -> UIViewController
     func demonsviewController(for demons: [Deamon]) -> UIViewController
+    func buyWeaponsViewController(for viewModel: BuyWeaponsViewModel, callback: @escaping (([Weapon], Int) -> Void)) -> UIViewController
 }

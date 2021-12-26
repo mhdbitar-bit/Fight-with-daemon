@@ -13,5 +13,5 @@ public protocol BattleDelegate {
     func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon], weaponsCallback: @escaping (() -> Void), demonsCallback: @escaping (([Deamon]) -> Void))
     func showReamaingWeapons(for weapons: [Weapon])
     func showKilledDemons(for demons: [Deamon])
-    func buyWeapons(amount: Int)
+    func buyWeapons(amount: Int, callback: @escaping (([Weapon], Int) -> Void))
 }
