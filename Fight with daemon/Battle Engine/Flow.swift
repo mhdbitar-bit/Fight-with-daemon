@@ -51,11 +51,13 @@ final class Flow {
     private func fightResult(at index: Int) -> (Result) -> Void {
         return { [weak self] result in
             guard let self = self else { return }
+            self.results.insert(result, at: index)
             if result.state == .Lose {
                 self.game.weapons = self.game.weapons.filter { $0 != result.weapon }
+                self.delegateFightHandling(at: index)
+            } else {
+                self.delegateFightHandling(after: index)
             }
-            self.results.insert(result, at: index)
-            self.delegateFightHandling(after: index)
         }
     }
     
