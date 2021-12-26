@@ -27,7 +27,7 @@ final class DemonsViewController: UIViewController {
     }
 }
 
-extension DemonsViewController: UITableViewDataSource {
+extension DemonsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demons.count
     }
