@@ -16,13 +16,15 @@ final class BattleResultsViewController: UIViewController, Alertable {
     @IBOutlet weak var deamonsLabel: UILabel!
     
     private var viewModel: BattleResultViewModel!
-    private var callback: (() -> Void)? = nil
+    private var weaponsCallback: (() -> Void)? = nil
+    private var demonsCallback: (([Deamon]) -> Void)? = nil
     private var cancellables: Set<AnyCancellable> = []
     
-    convenience init(viewModel: BattleResultViewModel, callback: @escaping (() -> Void)) {
+    convenience init(viewModel: BattleResultViewModel, weaponsCallback: @escaping (() -> Void), demonsCallback: @escaping (([Deamon]) -> Void)) {
         self.init()
         self.viewModel = viewModel
-        self.callback = callback
+        self.weaponsCallback = weaponsCallback
+        self.demonsCallback = demonsCallback
     }
     
     override func viewDidLoad() {
@@ -73,12 +75,16 @@ final class BattleResultsViewController: UIViewController, Alertable {
     }
     
     @IBAction func showDeamonsBtnTapped(_ sender: UIButton) {
-        
+        if viewModel.killedDemons.count > 0 {
+            demonsCallback?(viewModel.killedDemons)
+        } else {
+            showAlert(message: "You have not killed any demon.")
+        }
     }
     
     @IBAction func showWeaponsBtnTapped(_ sender: UIButton) {
         if viewModel.weapons.count > 0 {
-            callback?()
+            weaponsCallback?()
         } else {
             showAlert(message: "There are no remaining weapons.")
         }

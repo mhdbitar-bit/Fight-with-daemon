@@ -8,6 +8,10 @@
 import UIKit
 
 final class BattleViewControllerFactory: ViewControllerFactory {
+    func demonsviewController(for demons: [Deamon]) -> UIViewController {
+        let vc = DemonsViewController(demons: demons)
+        return vc
+    }
     
     func weaponsViewController(for weapons: [Weapon], callback: @escaping (Weapon) -> Void) -> UIViewController {
         let vc = WeaponsViewController(weapons: weapons, selection: callback)
@@ -20,9 +24,9 @@ final class BattleViewControllerFactory: ViewControllerFactory {
         return vc
     }
     
-    func resultsViewController(for results: [Result], remaingWeapons: [Weapon], callback: @escaping () -> Void) -> UIViewController {
+    func resultsViewController(for results: [Result], remaingWeapons: [Weapon], weaponsCallback: @escaping (() -> Void), demonsCallback: @escaping (([Deamon]) -> Void)) -> UIViewController {
         let viewModel = BattleResultViewModel(battleResults: results, remaingWeapons: remaingWeapons)
-        let vc = BattleResultsViewController(viewModel: viewModel, callback: callback)
+        let vc = BattleResultsViewController(viewModel: viewModel, weaponsCallback: weaponsCallback, demonsCallback: demonsCallback)
         return vc
     }
 }

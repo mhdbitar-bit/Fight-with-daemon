@@ -25,12 +25,19 @@ final class BattleNavigationControllerRouter: BattleDelegate {
         show(factory.activityViewController(for: activity, continueCallBack: continueCompletion, buyWeaponsCallback: buyWeaponsCompletion))
     }
     
-    func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon], callback: @escaping (() -> Void)) {
-        show(factory.resultsViewController(for: results, remaingWeapons: remaingWeapons, callback: callback))
+    func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon], weaponsCallback: @escaping (() -> Void), demonsCallback: @escaping (([Deamon]) -> Void)) {
+        show(factory.resultsViewController(for: results,
+                                              remaingWeapons: remaingWeapons,
+                                              weaponsCallback: weaponsCallback,
+                                              demonsCallback: demonsCallback))
     }
     
     func showReamaingWeapons(for weapons: [Weapon]) {
         present(factory.weaponsViewController(for: weapons, callback: { _ in }))
+    }
+    
+    func showKilledDemons(for demons: [Deamon]) {
+        present(factory.demonsviewController(for: demons))
     }
     
     func buyWeapons(amount: Int) {
