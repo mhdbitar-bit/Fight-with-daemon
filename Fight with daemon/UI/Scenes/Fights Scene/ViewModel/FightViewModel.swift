@@ -1,5 +1,5 @@
 //
-//  ActivityViewModel.swift
+//  FightViewModel.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/24/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ActivityViewModel {
+final class FightViewModel {
     var weapon: Weapon
     var demon: Deamon
     var amount: Int

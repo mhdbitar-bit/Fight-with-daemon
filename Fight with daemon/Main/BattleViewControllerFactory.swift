@@ -15,8 +15,8 @@ final class BattleViewControllerFactory: ViewControllerFactory {
     }
     
     func activityViewController(for activity: Activity, continueCallBack: @escaping (Result) -> Void, buyWeaponsCallback: @escaping () -> Void ) -> UIViewController {
-        let viewModel = ActivityViewModel(weapon: activity.weapon, demon: activity.demon, amount: activity.amount)
-        let vc = ActivityViewController(viewModel: viewModel, continueAction: continueCallBack, buyWeaponsAction: buyWeaponsCallback)
+        let viewModel = FightViewModel(weapon: activity.weapon, demon: activity.demon, amount: activity.amount)
+        let vc = FightViewController(viewModel: viewModel, continueAction: continueCallBack, buyWeaponsAction: buyWeaponsCallback)
         return vc
     }
     

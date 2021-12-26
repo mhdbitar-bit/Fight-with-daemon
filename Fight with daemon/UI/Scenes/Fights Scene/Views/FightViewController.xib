@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="Fight_with_daemon" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FightViewController" customModule="Fight_with_daemon" customModuleProvider="target">
             <connections>
                 <outlet property="actionButton" destination="nM3-Hh-1rL" id="0PA-8k-wvh"/>
                 <outlet property="collectionView" destination="xps-Kx-1X1" id="dIe-ff-wD1"/>

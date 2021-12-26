@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C06157B27762A27009C6C08 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06157927762A27009C6C08 /* ActivityViewController.swift */; };
-		4C06157C27762A27009C6C08 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C06157A27762A27009C6C08 /* ActivityViewController.xib */; };
-		4C06158127762E6C009C6C08 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06158027762E6C009C6C08 /* ActivityViewModel.swift */; };
+		4C06157B27762A27009C6C08 /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06157927762A27009C6C08 /* FightViewController.swift */; };
+		4C06157C27762A27009C6C08 /* FightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C06157A27762A27009C6C08 /* FightViewController.xib */; };
+		4C06158127762E6C009C6C08 /* FightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06158027762E6C009C6C08 /* FightViewModel.swift */; };
 		4C184FE6277235F000CE1CFF /* BuyWeaponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE4277235F000CE1CFF /* BuyWeaponsViewController.swift */; };
 		4C184FE7277235F000CE1CFF /* BuyWeaponsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C184FE5277235F000CE1CFF /* BuyWeaponsViewController.xib */; };
 		4C184FE92772395700CE1CFF /* BuyWeaponsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C184FE82772395700CE1CFF /* BuyWeaponsViewModel.swift */; };
@@ -57,9 +57,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C06157927762A27009C6C08 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		4C06157A27762A27009C6C08 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
-		4C06158027762E6C009C6C08 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		4C06157927762A27009C6C08 /* FightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
+		4C06157A27762A27009C6C08 /* FightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FightViewController.xib; sourceTree = "<group>"; };
+		4C06158027762E6C009C6C08 /* FightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewModel.swift; sourceTree = "<group>"; };
 		4C184FE4277235F000CE1CFF /* BuyWeaponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyWeaponsViewController.swift; sourceTree = "<group>"; };
 		4C184FE5277235F000CE1CFF /* BuyWeaponsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyWeaponsViewController.xib; sourceTree = "<group>"; };
 		4C184FE82772395700CE1CFF /* BuyWeaponsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyWeaponsViewModel.swift; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		4C061574277627D0009C6C08 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4C06157927762A27009C6C08 /* ActivityViewController.swift */,
-				4C06157A27762A27009C6C08 /* ActivityViewController.xib */,
+				4C06157927762A27009C6C08 /* FightViewController.swift */,
+				4C06157A27762A27009C6C08 /* FightViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 		4C06157D27762B56009C6C08 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4C06158027762E6C009C6C08 /* ActivityViewModel.swift */,
+				4C06158027762E6C009C6C08 /* FightViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -490,7 +490,7 @@
 			files = (
 				4C184FE7277235F000CE1CFF /* BuyWeaponsViewController.xib in Resources */,
 				4CF1FC8E27739CB900CB2060 /* DeamonsViewController.xib in Resources */,
-				4C06157C27762A27009C6C08 /* ActivityViewController.xib in Resources */,
+				4C06157C27762A27009C6C08 /* FightViewController.xib in Resources */,
 				4C40497E2774A669005DAF79 /* DeamonCollectionViewCell.xib in Resources */,
 				4C81A303277841BB003485D2 /* WeaponsViewController.xib in Resources */,
 				4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */,
@@ -513,7 +513,7 @@
 				4CF1FC922773A70300CB2060 /* Deamon.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
-				4C06157B27762A27009C6C08 /* ActivityViewController.swift in Sources */,
+				4C06157B27762A27009C6C08 /* FightViewController.swift in Sources */,
 				4C4B7BC1277700D6000E2FDE /* BattleDelegate.swift in Sources */,
 				4C40497D2774A669005DAF79 /* DeamonCollectionViewCell.swift in Sources */,
 				4CF1FC902773A32100CB2060 /* DeamonViewModel.swift in Sources */,
@@ -521,7 +521,7 @@
 				4C4B7BBF2777001D000E2FDE /* BattleNavigationControllerRouter.swift in Sources */,
 				4CDB8EEE27710445009489A5 /* Alertable.swift in Sources */,
 				4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */,
-				4C06158127762E6C009C6C08 /* ActivityViewModel.swift in Sources */,
+				4C06158127762E6C009C6C08 /* FightViewModel.swift in Sources */,
 				4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */,
 				4C404975277490B4005DAF79 /* BattleResultsViewController.swift in Sources */,
 				4C4B7BC327770484000E2FDE /* BattleViewControllerFactory.swift in Sources */,

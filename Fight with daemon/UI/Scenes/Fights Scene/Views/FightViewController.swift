@@ -1,5 +1,5 @@
 //
-//  ActivityViewController.swift
+//  FightViewController.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/24/21.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-final class ActivityViewController: UIViewController, Alertable {
-    
+final class FightViewController: UIViewController, Alertable, Lodable {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var actionButton: UIButton!
     
-    private var viewModel: ActivityViewModel!
+    private var viewModel: FightViewModel!
     private var continueAction: ((Result) -> Void)? = nil
     private var buyWeaponsAction: (() -> Void)? = nil
+    var activityIndicator = UIActivityIndicatorView()
     
     private let padding: CGFloat = 20
     private let headerID = "Header"
     
-    convenience init(viewModel: ActivityViewModel, continueAction: @escaping (Result) -> Void, buyWeaponsAction: @escaping (() -> Void)) {
+    convenience init(viewModel: FightViewModel, continueAction: @escaping (Result) -> Void, buyWeaponsAction: @escaping (() -> Void)) {
         self.init()
         self.viewModel = viewModel
         self.continueAction = continueAction
@@ -58,12 +58,12 @@ final class ActivityViewController: UIViewController, Alertable {
         if fightResult.state == .Lose && viewModel.amount > 0 {
             displayBuyWeaponsSheet(fightResult)
         } else {
-            continueBattle(fightResult)
+            continueToNextFight(result: fightResult)
         }
     }
 }
 
-extension ActivityViewController: UICollectionViewDataSource {
+extension FightViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -90,25 +90,25 @@ extension ActivityViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-           var view : UICollectionReusableView! = nil
-           if kind == UICollectionView.elementKindSectionHeader {
-               view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.headerID, for: indexPath)
-               if view.subviews.count == 0 {
-                   view.addSubview(UILabel(frame:CGRect(x: 0,y: 0,width: collectionView.frame.width, height: 30)))
-               }
-               let label = view.subviews[0] as! UILabel
-               if indexPath.section == 0 {
-                   label.text = "Weappons"
-               } else {
-                   label.text = "Deamon"
-               }
-               label.textAlignment = .center
-           }
-           return view
-       }
+        var view : UICollectionReusableView! = nil
+        if kind == UICollectionView.elementKindSectionHeader {
+            view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.headerID, for: indexPath)
+            if view.subviews.count == 0 {
+                view.addSubview(UILabel(frame:CGRect(x: 0,y: 0,width: collectionView.frame.width, height: 30)))
+            }
+            let label = view.subviews[0] as! UILabel
+            if indexPath.section == 0 {
+                label.text = "Weappons"
+            } else {
+                label.text = "Deamon"
+            }
+            label.textAlignment = .center
+        }
+        return view
+    }
 }
 
-extension ActivityViewController: UICollectionViewDelegateFlowLayout {
+extension FightViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return padding
@@ -125,7 +125,7 @@ extension ActivityViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension ActivityViewController {
+extension FightViewController {
     private func continueBattle(_ fightResult: Result) {
         continueAction?(fightResult)
     }
@@ -134,16 +134,46 @@ extension ActivityViewController {
         buyWeaponsAction?()
     }
     
-    private func displayBuyWeaponsSheet(_ fightResult: Result) {
-        showActionsheet(title: "Info", message: "Looks you have some \(viewModel.amount) amounts, do you want to buy some weapons?", actions: [
-            ("Get new Weapons", .default),
-            ("Continue", .cancel)
-        ]) { [weak self] index in
+    private func continueToNextFight(result: Result) {
+        self.showSpinner()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             guard let self = self else { return }
-            if index == 0 {
-                self.displayWeapons()
+            self.hideSpinner()
+            var message = ""
+            if result.state == .Lose {
+                message = "You lost this fight"
             } else {
-                self.continueBattle(fightResult)
+                message = "You Won this fight"
+            }
+            self.showActionsheet(title: "Info", message: message, actions: [
+                ("Continue", .default),
+                ("Exit Game", .destructive)
+            ]) { [weak self] index in
+                guard let self = self else { return }
+                if index == 0 {
+                    self.continueBattle(result)
+                } else {
+                    self.navigationController?.setViewControllers([BattlePreperationFlowViewController()], animated: false)
+                }
+            }
+        }
+    }
+    
+    private func displayBuyWeaponsSheet(_ fightResult: Result) {
+        self.showSpinner()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let self = self else { return }
+            self.hideSpinner()
+            self.showActionsheet(title: "Info", message: "You Lost this fight, and looks you have some \(self.viewModel.amount) amounts, do you want to buy some weapons?", actions: [
+                ("Get new Weapons", .default),
+                ("Continue", .cancel)
+            ]) { [weak self] index in
+                guard let self = self else { return }
+                if index == 0 {
+                    self.displayWeapons()
+                } else {
+                    self.continueBattle(fightResult)
+                }
             }
         }
     }
