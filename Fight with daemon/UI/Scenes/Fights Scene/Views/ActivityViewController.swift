@@ -43,8 +43,8 @@ final class ActivityViewController: UIViewController, Alertable {
     }
     
     private func registerCollectionViewCells() {
-        collectionView.register(DeamonCollectionViewCell.nib, forCellWithReuseIdentifier: DeamonCollectionViewCell.identifier)
-        collectionView.register(WeaponCollectionViewCell.nib, forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier)
+        collectionView.register(DeamonCollectionViewCell.self)
+        collectionView.register(WeaponCollectionViewCell.self)
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.headerID)
     }
     
@@ -75,13 +75,13 @@ extension ActivityViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeaponCollectionViewCell.identifier, for: indexPath) as? WeaponCollectionViewCell else {
+            guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
             cell.weapon = viewModel.weapons[indexPath.row]
             return cell
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DeamonCollectionViewCell.identifier, for: indexPath) as? DeamonCollectionViewCell else {
+            guard let cell = collectionView.dequeueReusableCell(DeamonCollectionViewCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
             cell.deamon = viewModel.demon

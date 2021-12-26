@@ -1,5 +1,5 @@
 //
-//  WeaponsViewModel.swift
+//  BuyWeaponsViewModel.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/21/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class WeaponsViewModel {
+final class BuyWeaponsViewModel {
     
     public let title: String = "Game Preperation"
     private var previouseAmount: Int = 0

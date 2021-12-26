@@ -1,5 +1,5 @@
 //
-//  WeaponsViewController.swift
+//  BuyWeaponsViewController.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/21/21.
@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class WeaponsViewController: UIViewController {
+final class BuyWeaponsViewController: UIViewController {
     
     @IBOutlet weak var boardView: UIView! {
         didSet {
@@ -20,12 +20,12 @@ final class WeaponsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     
-    private var viewModel: WeaponsViewModel!
+    private var viewModel: BuyWeaponsViewModel!
     private var delegate: GameFlowViewDelegate?
     private var cancellables: Set<AnyCancellable> = []
     private let padding: CGFloat = 20
     
-    convenience init(viewModel: WeaponsViewModel, delegate: GameFlowViewDelegate) {
+    convenience init(viewModel: BuyWeaponsViewModel, delegate: GameFlowViewDelegate) {
         self.init()
         self.viewModel = viewModel
         self.delegate = delegate
@@ -45,10 +45,11 @@ final class WeaponsViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(
-            WeaponCollectionViewCell.nib,
-            forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier
-        )
+        collectionView.register(WeaponCollectionViewCell.self)
+//        collectionView.register(
+//            WeaponCollectionViewCell.nib,
+//            forCellWithReuseIdentifier: WeaponCollectionViewCell.identifier
+//        )
         collectionView.allowsSelection = true
         collectionView.allowsMultipleSelection = true
         collectionView.reloadData()
@@ -92,22 +93,20 @@ final class WeaponsViewController: UIViewController {
     }
 }
 
-extension WeaponsViewController: UICollectionViewDataSource {
+extension BuyWeaponsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.weapons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeaponCollectionViewCell.identifier, for: indexPath) as? WeaponCollectionViewCell else {
-            return UICollectionViewCell()
-        }
+        guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else { return UICollectionViewCell() }        
         cell.weapon = viewModel.weapons[indexPath.row]
         return cell
     }
 }
 
-extension WeaponsViewController: UICollectionViewDelegateFlowLayout {
+extension BuyWeaponsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return padding
@@ -124,7 +123,7 @@ extension WeaponsViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension WeaponsViewController: UICollectionViewDelegate {
+extension BuyWeaponsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectWeapon(at: indexPath.row)
