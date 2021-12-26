@@ -20,8 +20,6 @@
 		4C40497027746D90005DAF79 /* GameFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40496F27746D90005DAF79 /* GameFlowViewController.swift */; };
 		4C404975277490B4005DAF79 /* BattleResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C404973277490B4005DAF79 /* BattleResultsViewController.swift */; };
 		4C404976277490B4005DAF79 /* BattleResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C404974277490B4005DAF79 /* BattleResultsViewController.xib */; };
-		4C40497D2774A669005DAF79 /* DeamonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40497B2774A669005DAF79 /* DeamonCollectionViewCell.swift */; };
-		4C40497E2774A669005DAF79 /* DeamonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C40497C2774A669005DAF79 /* DeamonCollectionViewCell.xib */; };
 		4C4B7BB72776F6CF000E2FDE /* BattleResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BB62776F6CF000E2FDE /* BattleResultViewModel.swift */; };
 		4C4B7BBD2776FEBE000E2FDE /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BBC2776FEBE000E2FDE /* ViewControllerFactory.swift */; };
 		4C4B7BBF2777001D000E2FDE /* BattleNavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B7BBE2777001D000E2FDE /* BattleNavigationControllerRouter.swift */; };
@@ -79,8 +77,6 @@
 		4C40496F27746D90005DAF79 /* GameFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlowViewController.swift; sourceTree = "<group>"; };
 		4C404973277490B4005DAF79 /* BattleResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultsViewController.swift; sourceTree = "<group>"; };
 		4C404974277490B4005DAF79 /* BattleResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BattleResultsViewController.xib; sourceTree = "<group>"; };
-		4C40497B2774A669005DAF79 /* DeamonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeamonCollectionViewCell.swift; sourceTree = "<group>"; };
-		4C40497C2774A669005DAF79 /* DeamonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeamonCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C4B7BB62776F6CF000E2FDE /* BattleResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewModel.swift; sourceTree = "<group>"; };
 		4C4B7BBC2776FEBE000E2FDE /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		4C4B7BBE2777001D000E2FDE /* BattleNavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNavigationControllerRouter.swift; sourceTree = "<group>"; };
@@ -459,8 +455,6 @@
 			children = (
 				4CF1FC8B27739CB900CB2060 /* DeamonAmountsViewController.swift */,
 				4CF1FC8C27739CB900CB2060 /* DeamonAmountsViewController.xib */,
-				4C40497B2774A669005DAF79 /* DeamonCollectionViewCell.swift */,
-				4C40497C2774A669005DAF79 /* DeamonCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -537,7 +531,6 @@
 				4CF1FC8E27739CB900CB2060 /* DeamonAmountsViewController.xib in Resources */,
 				4C81A314277873BC003485D2 /* DemonsViewController.xib in Resources */,
 				4C06157C27762A27009C6C08 /* FightViewController.xib in Resources */,
-				4C40497E2774A669005DAF79 /* DeamonCollectionViewCell.xib in Resources */,
 				4C81A303277841BB003485D2 /* WeaponsViewController.xib in Resources */,
 				4CDB8EE32770FC3C009489A5 /* AmountViewController.xib in Resources */,
 				4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */,
@@ -564,7 +557,6 @@
 				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
 				4C06157B27762A27009C6C08 /* FightViewController.swift in Sources */,
 				4C4B7BC1277700D6000E2FDE /* BattleDelegate.swift in Sources */,
-				4C40497D2774A669005DAF79 /* DeamonCollectionViewCell.swift in Sources */,
 				4CF1FC902773A32100CB2060 /* DeamonAmountViewModel.swift in Sources */,
 				4C4B7BC5277712F5000E2FDE /* Battle.swift in Sources */,
 				4C4B7BBF2777001D000E2FDE /* BattleNavigationControllerRouter.swift in Sources */,
