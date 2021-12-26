@@ -1,5 +1,5 @@
 //
-//  DeamonViewModel.swift
+//  DeamonAmountViewModel.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/22/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class DeamonViewModel {
+final class DeamonAmountViewModel {
     let title: String = "Deamon Amount"
     @Published var amount: String = ""
     

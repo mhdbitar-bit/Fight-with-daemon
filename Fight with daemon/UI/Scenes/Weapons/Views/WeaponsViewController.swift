@@ -46,6 +46,8 @@ extension WeaponsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selection?(weapons[indexPath.row])
+        if let selection = selection {
+            selection(weapons[indexPath.row])
+        }
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class BattleResultsViewController: UIViewController {
+final class BattleResultsViewController: UIViewController, Alertable {
     
     @IBOutlet weak var resultImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
@@ -16,11 +16,13 @@ final class BattleResultsViewController: UIViewController {
     @IBOutlet weak var deamonsLabel: UILabel!
     
     private var viewModel: BattleResultViewModel!
+    private var callback: (() -> Void)? = nil
     private var cancellables: Set<AnyCancellable> = []
     
-    convenience init(viewModel: BattleResultViewModel) {
+    convenience init(viewModel: BattleResultViewModel, callback: @escaping (() -> Void)) {
         self.init()
         self.viewModel = viewModel
+        self.callback = callback
     }
     
     override func viewDidLoad() {
@@ -75,5 +77,10 @@ final class BattleResultsViewController: UIViewController {
     }
     
     @IBAction func showWeaponsBtnTapped(_ sender: UIButton) {
+        if viewModel.weapons.count > 0 {
+            callback?()
+        } else {
+            showAlert(message: "There are no remaining weapons.")
+        }
     }
 }

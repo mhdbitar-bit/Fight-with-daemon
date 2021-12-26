@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeamonsViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeamonAmountsViewController" customModule="Fight_with_daemon" customModuleProvider="target">
             <connections>
                 <outlet property="deamonTextField" destination="BaR-2Q-A0d" id="M4n-ZE-qxJ"/>
                 <outlet property="submitButton" destination="zEI-nk-1NX" id="4Xo-dJ-CK4"/>

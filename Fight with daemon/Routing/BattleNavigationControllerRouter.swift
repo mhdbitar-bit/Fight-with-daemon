@@ -25,8 +25,12 @@ final class BattleNavigationControllerRouter: BattleDelegate {
         show(factory.activityViewController(for: activity, continueCallBack: continueCompletion, buyWeaponsCallback: buyWeaponsCompletion))
     }
     
-    func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon]) {
-        show(factory.resultsViewController(for: results, remaingWeapons: remaingWeapons))
+    func didCompleteBattle(withResults results: [Result], remaingWeapons: [Weapon], callback: @escaping (() -> Void)) {
+        show(factory.resultsViewController(for: results, remaingWeapons: remaingWeapons, callback: callback))
+    }
+    
+    func showReamaingWeapons(for weapons: [Weapon]) {
+        present(factory.weaponsViewController(for: weapons, callback: { _ in }))
     }
     
     func buyWeapons(amount: Int) {
@@ -37,5 +41,9 @@ final class BattleNavigationControllerRouter: BattleDelegate {
     
     private func show(_ viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func present(_ viewController: UIViewController) {
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }

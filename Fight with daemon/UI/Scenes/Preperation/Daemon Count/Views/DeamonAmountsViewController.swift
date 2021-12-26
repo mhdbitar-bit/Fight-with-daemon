@@ -1,5 +1,5 @@
 //
-//  DeamonsViewController.swift
+//  DeamonAmountsViewController.swift
 //  Fight with daemon
 //
 //  Created by Mohammad Bitar on 12/22/21.
@@ -8,18 +8,18 @@
 import UIKit
 import Combine
 
-final class DeamonsViewController: UIViewController, Alertable {
+final class DeamonAmountsViewController: UIViewController, Alertable {
 
     @IBOutlet weak var deamonTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    private var viewModel: DeamonViewModel!
+    private var viewModel: DeamonAmountViewModel!
     private var delegate: GameFlowViewDelegate?
     private var cancellables = Set<AnyCancellable>()
     
     let INVALID_DEMON = "Invalid demons amount, Please enter a valid amount"
     
-    convenience init(viewModel: DeamonViewModel, delegate: GameFlowViewDelegate) {
+    convenience init(viewModel: DeamonAmountViewModel, delegate: GameFlowViewDelegate) {
         self.init()
         self.viewModel = viewModel
         self.delegate = delegate

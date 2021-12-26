@@ -16,7 +16,7 @@ class WeaponTableViewCell: UITableViewCell {
     var weapon: Weapon! {
         didSet {
             powerLabel.text = weapon.name
-            powerLabel.text = "Price: \(weapon.price)"
+            priceLabel.text = "Price: \(weapon.price)"
             weaponImage.image = UIImage(named: weapon.image)
         }
     }

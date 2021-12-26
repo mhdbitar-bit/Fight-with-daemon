@@ -25,7 +25,10 @@ final class Flow {
         if index < game.demons.endIndex && !game.weapons.isEmpty {
             delegate.selectWeapon(for: game.weapons, completion: startFighiting(index))
         } else {
-            delegate.didCompleteBattle(withResults: results, remaingWeapons: game.weapons)
+            delegate.didCompleteBattle(withResults: results, remaingWeapons: game.weapons) { [weak self] in
+                guard let self = self else { return }
+                self.delegate.showReamaingWeapons(for: self.game.weapons)
+            }
         }
     }
     

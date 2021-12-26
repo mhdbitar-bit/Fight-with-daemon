@@ -20,9 +20,9 @@ final class BattleViewControllerFactory: ViewControllerFactory {
         return vc
     }
     
-    func resultsViewController(for results: [Result], remaingWeapons: [Weapon]) -> UIViewController {
+    func resultsViewController(for results: [Result], remaingWeapons: [Weapon], callback: @escaping () -> Void) -> UIViewController {
         let viewModel = BattleResultViewModel(battleResults: results, remaingWeapons: remaingWeapons)
-        let vc = BattleResultsViewController(viewModel: viewModel)
+        let vc = BattleResultsViewController(viewModel: viewModel, callback: callback)
         return vc
     }
 }

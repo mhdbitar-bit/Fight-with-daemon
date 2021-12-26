@@ -42,8 +42,8 @@ extension BattlePreperationFlowViewController: GameFlowViewDelegate {
     func didReceiveWeapons(weapons: [Weapon], remainingAmount: Int) {
         self.amount = remainingAmount
         self.weapons = weapons
-        let deamonsViewModel = DeamonViewModel()
-        let vc = DeamonsViewController(viewModel: deamonsViewModel, delegate: self)
+        let deamonsViewModel = DeamonAmountViewModel()
+        let vc = DeamonAmountsViewController(viewModel: deamonsViewModel, delegate: self)
         show(vc, sender: self)
     }
     
