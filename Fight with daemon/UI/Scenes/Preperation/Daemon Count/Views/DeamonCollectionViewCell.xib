@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,38 +15,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="226" height="208"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjM-2z-vzf">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjM-2z-vzf" customClass="DemonView" customModule="Fight_with_daemon" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="226" height="208"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deamon" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-mL-7A5">
-                                <rect key="frame" x="56.5" y="8" width="113" height="113"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="uAf-mL-7A5" secondAttribute="height" multiplier="1:1" id="MZy-Xt-zty"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w0E-vT-TpV">
-                                <rect key="frame" x="8" y="129" width="210" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOl-t3-yEZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="w0E-vT-TpV" firstAttribute="leading" secondItem="OjM-2z-vzf" secondAttribute="leading" constant="8" id="Ivq-DP-ENg"/>
-                            <constraint firstItem="w0E-vT-TpV" firstAttribute="top" secondItem="uAf-mL-7A5" secondAttribute="bottom" constant="8" id="McT-hI-X4g"/>
-                            <constraint firstAttribute="trailing" secondItem="w0E-vT-TpV" secondAttribute="trailing" constant="8" id="jTP-qT-sO9"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w0E-vT-TpV" secondAttribute="bottom" constant="8" id="nLl-KA-umE"/>
-                            <constraint firstItem="uAf-mL-7A5" firstAttribute="centerX" secondItem="OjM-2z-vzf" secondAttribute="centerX" id="o8C-3U-iWr"/>
-                            <constraint firstItem="uAf-mL-7A5" firstAttribute="width" secondItem="OjM-2z-vzf" secondAttribute="width" multiplier="0.5" id="p7s-LA-EtK"/>
-                            <constraint firstItem="uAf-mL-7A5" firstAttribute="top" secondItem="OjM-2z-vzf" secondAttribute="top" constant="8" id="yY3-XI-B9x"/>
-                            <constraint firstItem="w0E-vT-TpV" firstAttribute="centerX" secondItem="uAf-mL-7A5" secondAttribute="centerX" id="zLw-PD-A2v"/>
-                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -59,16 +29,9 @@
             </constraints>
             <size key="customSize" width="226" height="208"/>
             <connections>
-                <outlet property="containerView" destination="OjM-2z-vzf" id="Aib-5j-mHV"/>
-                <outlet property="nameLabel" destination="eOl-t3-yEZ" id="uX2-ir-wZo"/>
+                <outlet property="demonView" destination="OjM-2z-vzf" id="Aki-Yz-0zK"/>
             </connections>
             <point key="canvasLocation" x="259.4202898550725" y="132.58928571428572"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="deamon" width="512" height="512"/>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

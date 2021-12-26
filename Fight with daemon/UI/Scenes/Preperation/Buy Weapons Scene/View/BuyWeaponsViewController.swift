@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class BuyWeaponsViewController: UIViewController {
+final class BuyWeaponsViewController: UIViewController, Alertable {
     
     @IBOutlet weak var boardView: UIView! {
         didSet {
@@ -87,6 +87,20 @@ final class BuyWeaponsViewController: UIViewController {
     @IBAction func resetBtnTapped(_ sender: UIButton) {
         viewModel.reset()
     }
+    
+    @objc private func addAction(_ sender: UIButton) {
+        let isAdded = viewModel.selectWeapon(at: sender.tag)
+        if !isAdded {
+            showAlert(message: "You don't have enoght amount to get this weapons.")
+        }
+    }
+    
+    @objc private func removeAction(_ sender: UIButton) {
+        let isRemoved = viewModel.removeWeapon(at: sender.tag)
+        if !isRemoved {
+            showAlert(message: "You have to select this weapon to be able to remove it.")
+        }
+    }
 }
 
 extension BuyWeaponsViewController: UICollectionViewDataSource {
@@ -97,7 +111,11 @@ extension BuyWeaponsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(WeaponCollectionViewCell.self, indexPath: indexPath) else { return UICollectionViewCell() }        
-        cell.weapon = viewModel.weapons[indexPath.row]
+        cell.configure(weapon: viewModel.weapons[indexPath.row])
+        cell.addBtn.tag = indexPath.row
+        cell.removeBtn.tag = indexPath.row
+        cell.addBtn.addTarget(self, action: #selector(addAction), for: .touchUpInside)
+        cell.removeBtn.addTarget(self, action: #selector(removeAction), for: .touchUpInside)
         return cell
     }
 }
@@ -115,17 +133,6 @@ extension BuyWeaponsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = (collectionView.frame.size.width - padding) / 2
-        return CGSize(width: width, height: width)
-    }
-}
-
-extension BuyWeaponsViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectWeapon(at: indexPath.row)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        viewModel.removeWeapon(at: indexPath.row)
+        return CGSize(width: width, height: 200)
     }
 }

@@ -29,29 +29,58 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dBX-uT-JsC">
-                                        <rect key="frame" x="95" y="136.5" width="51.5" height="56"/>
+                                        <rect key="frame" x="95" y="136.5" width="51.5" height="42.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyI-iP-drT">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb2-tl-2e4">
-                                                <rect key="frame" x="1" y="32" width="49" height="24"/>
+                                                <rect key="frame" x="1" y="25.5" width="49" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemGreenColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-CA-MgD">
+                                        <rect key="frame" x="85.5" y="189" width="70" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTl-gb-3gI">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lTl-gb-3gI" secondAttribute="height" multiplier="1:1" id="bc7-UJ-Ghy"/>
+                                                    <constraint firstAttribute="height" constant="30" id="fin-7W-UjC"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMt-nI-heo">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dBX-uT-JsC" secondAttribute="bottom" constant="8" id="Gtt-fU-JBy"/>
+                                    <constraint firstItem="dpU-CA-MgD" firstAttribute="centerX" secondItem="bq5-rY-MW2" secondAttribute="centerX" id="2tO-Ws-SF1"/>
+                                    <constraint firstItem="dpU-CA-MgD" firstAttribute="top" secondItem="dBX-uT-JsC" secondAttribute="bottom" constant="10" id="Pfc-wg-VLc"/>
                                     <constraint firstItem="Pvi-pi-YNC" firstAttribute="top" secondItem="bq5-rY-MW2" secondAttribute="top" constant="8" id="Uhe-v7-Jbc"/>
                                     <constraint firstItem="Pvi-pi-YNC" firstAttribute="width" secondItem="bq5-rY-MW2" secondAttribute="width" multiplier="0.5" id="VO1-Ex-MHM"/>
                                     <constraint firstItem="dBX-uT-JsC" firstAttribute="top" secondItem="Pvi-pi-YNC" secondAttribute="bottom" constant="8" id="Wry-5Q-1VK"/>
+                                    <constraint firstAttribute="bottom" secondItem="dpU-CA-MgD" secondAttribute="bottom" constant="10" id="bS8-UE-aBT"/>
                                     <constraint firstItem="Pvi-pi-YNC" firstAttribute="centerX" secondItem="bq5-rY-MW2" secondAttribute="centerX" id="fuQ-sz-LSY"/>
                                     <constraint firstItem="dBX-uT-JsC" firstAttribute="centerX" secondItem="Pvi-pi-YNC" secondAttribute="centerX" id="zjj-Sx-md1"/>
                                 </constraints>
@@ -77,7 +106,9 @@
             </constraints>
             <size key="customSize" width="241" height="229"/>
             <connections>
+                <outlet property="addBtn" destination="lTl-gb-3gI" id="Rti-va-n45"/>
                 <outlet property="containerView" destination="bq5-rY-MW2" id="jlp-XF-Fet"/>
+                <outlet property="removeBtn" destination="xMt-nI-heo" id="WzV-W9-G7X"/>
                 <outlet property="weaponImage" destination="Pvi-pi-YNC" id="Bq3-7R-hDS"/>
                 <outlet property="weaponNameLabel" destination="vyI-iP-drT" id="XrB-HR-IQn"/>
                 <outlet property="weaponPriceLabel" destination="xb2-tl-2e4" id="CON-VH-rzA"/>
@@ -86,6 +117,8 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

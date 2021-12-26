@@ -41,6 +41,11 @@
 		4C81A314277873BC003485D2 /* DemonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A312277873BC003485D2 /* DemonsViewController.xib */; };
 		4C81A317277874C0003485D2 /* DemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81A315277874C0003485D2 /* DemonTableViewCell.swift */; };
 		4C81A318277874C0003485D2 /* DemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A316277874C0003485D2 /* DemonTableViewCell.xib */; };
+		4C81A31A27788E2F003485D2 /* WeaponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A31927788E2F003485D2 /* WeaponView.xib */; };
+		4C81A31C27788E67003485D2 /* WeaponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81A31B27788E67003485D2 /* WeaponView.swift */; };
+		4C81A31E27788ECC003485D2 /* NibDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81A31D27788ECC003485D2 /* NibDefinable.swift */; };
+		4C81A3202778904E003485D2 /* DemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81A31F2778904E003485D2 /* DemonView.swift */; };
+		4C81A3222778905E003485D2 /* DemonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C81A3212778905E003485D2 /* DemonView.xib */; };
 		4CDB8ECD2770F5B9009489A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */; };
 		4CDB8ECF2770F5B9009489A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */; };
 		4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB8ED52770F5BA009489A5 /* Assets.xcassets */; };
@@ -95,6 +100,11 @@
 		4C81A312277873BC003485D2 /* DemonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemonsViewController.xib; sourceTree = "<group>"; };
 		4C81A315277874C0003485D2 /* DemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonTableViewCell.swift; sourceTree = "<group>"; };
 		4C81A316277874C0003485D2 /* DemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemonTableViewCell.xib; sourceTree = "<group>"; };
+		4C81A31927788E2F003485D2 /* WeaponView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponView.xib; sourceTree = "<group>"; };
+		4C81A31B27788E67003485D2 /* WeaponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponView.swift; sourceTree = "<group>"; };
+		4C81A31D27788ECC003485D2 /* NibDefinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDefinable.swift; sourceTree = "<group>"; };
+		4C81A31F2778904E003485D2 /* DemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonView.swift; sourceTree = "<group>"; };
+		4C81A3212778905E003485D2 /* DemonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemonView.xib; sourceTree = "<group>"; };
 		4CDB8EC92770F5B9009489A5 /* Fight with daemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fight with daemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDB8ECC2770F5B9009489A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDB8ECE2770F5B9009489A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +261,8 @@
 				4C81A301277841BB003485D2 /* WeaponsViewController.xib */,
 				4C81A30427784261003485D2 /* WeaponTableViewCell.swift */,
 				4C81A30527784261003485D2 /* WeaponTableViewCell.xib */,
+				4C81A31927788E2F003485D2 /* WeaponView.xib */,
+				4C81A31B27788E67003485D2 /* WeaponView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +282,8 @@
 				4C81A312277873BC003485D2 /* DemonsViewController.xib */,
 				4C81A315277874C0003485D2 /* DemonTableViewCell.swift */,
 				4C81A316277874C0003485D2 /* DemonTableViewCell.xib */,
+				4C81A31F2778904E003485D2 /* DemonView.swift */,
+				4C81A3212778905E003485D2 /* DemonView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +344,7 @@
 			children = (
 				4CDB8EED27710445009489A5 /* Alertable.swift */,
 				4CDB8EF8277106CD009489A5 /* Lodable.swift */,
+				4C81A31D27788ECC003485D2 /* NibDefinable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -518,6 +533,7 @@
 			files = (
 				4C81A318277874C0003485D2 /* DemonTableViewCell.xib in Resources */,
 				4C184FE7277235F000CE1CFF /* BuyWeaponsViewController.xib in Resources */,
+				4C81A31A27788E2F003485D2 /* WeaponView.xib in Resources */,
 				4CF1FC8E27739CB900CB2060 /* DeamonAmountsViewController.xib in Resources */,
 				4C81A314277873BC003485D2 /* DemonsViewController.xib in Resources */,
 				4C06157C27762A27009C6C08 /* FightViewController.xib in Resources */,
@@ -527,6 +543,7 @@
 				4C184FED27723B7700CE1CFF /* WeaponCollectionViewCell.xib in Resources */,
 				4CDB8ED92770F5BA009489A5 /* LaunchScreen.storyboard in Resources */,
 				4CDB8ED62770F5BA009489A5 /* Assets.xcassets in Resources */,
+				4C81A3222778905E003485D2 /* DemonView.xib in Resources */,
 				4C404976277490B4005DAF79 /* BattleResultsViewController.xib in Resources */,
 				4C81A30727784261003485D2 /* WeaponTableViewCell.xib in Resources */,
 			);
@@ -539,7 +556,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C81A31E27788ECC003485D2 /* NibDefinable.swift in Sources */,
 				4C4B7BDD2777931D000E2FDE /* Activity.swift in Sources */,
+				4C81A3202778904E003485D2 /* DemonView.swift in Sources */,
 				4CF1FC922773A70300CB2060 /* Deamon.swift in Sources */,
 				4CDB8EE527710166009489A5 /* AmountViewModel.swift in Sources */,
 				4C184FEC27723B7700CE1CFF /* WeaponCollectionViewCell.swift in Sources */,
@@ -558,6 +577,7 @@
 				4CDB8EF9277106CD009489A5 /* Lodable.swift in Sources */,
 				4C184FE92772395700CE1CFF /* BuyWeaponsViewModel.swift in Sources */,
 				4C4B7BB72776F6CF000E2FDE /* BattleResultViewModel.swift in Sources */,
+				4C81A31C27788E67003485D2 /* WeaponView.swift in Sources */,
 				4C4B7BC727771364000E2FDE /* Flow.swift in Sources */,
 				4C81A30B27784398003485D2 /* UITableView+Extension.swift in Sources */,
 				4CF1FC8D27739CB900CB2060 /* DeamonAmountsViewController.swift in Sources */,

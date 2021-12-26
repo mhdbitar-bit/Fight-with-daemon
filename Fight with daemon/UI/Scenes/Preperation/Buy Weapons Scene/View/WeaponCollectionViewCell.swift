@@ -17,13 +17,14 @@ class WeaponCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var weaponImage: UIImageView!
     @IBOutlet weak var weaponNameLabel: UILabel!
     @IBOutlet weak var weaponPriceLabel: UILabel!
-    @IBOutlet weak var checkImage: UIImageView!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var removeBtn: UIButton!
     
-    var weapon: Weapon! {
-        didSet {
-            weaponNameLabel.text = weapon.name
-            weaponPriceLabel.text = "Price: \(weapon.price)"
-            weaponImage.image = UIImage(named: weapon.image)
-        }
+    func configure(weapon: Weapon, with actions: Bool = true) {
+        weaponNameLabel.text = weapon.name
+        weaponPriceLabel.text = "Price: \(weapon.price)"
+        weaponImage.image = UIImage(named: weapon.image)
+        addBtn.isHidden = !actions
+        removeBtn.isHidden = !actions
     }
 }

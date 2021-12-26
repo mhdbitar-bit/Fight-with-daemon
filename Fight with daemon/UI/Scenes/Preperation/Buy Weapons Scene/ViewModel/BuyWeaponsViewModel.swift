@@ -31,17 +31,21 @@ final class BuyWeaponsViewModel {
         ]
     }
     
-    public func selectWeapon(at index: Int) {
+    public func selectWeapon(at index: Int) -> Bool {
         if amount > 0 && weapons[index].price <= amount {
             selectedWeapons.append(weapons[index])
             amount -= weapons[index].price
+            return true
         }
+        
+        return false
     }
     
-    public func removeWeapon(at index: Int) {
-        guard let selectedWeaponIndex = getWeaponIndex(selectedWeapon: weapons[index]) else { return }
+    public func removeWeapon(at index: Int) -> Bool {
+        guard let selectedWeaponIndex = getWeaponIndex(selectedWeapon: weapons[index]) else { return false }
         selectedWeapons.remove(at: selectedWeaponIndex)
         amount += weapons[index].price
+        return true
     }
     
     public func reset() {

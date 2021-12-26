@@ -9,16 +9,11 @@ import UIKit
 
 final class DeamonCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var containerView: UIView! {
-        didSet {
-            self.containerView.setRoundedConrerWith(corner: 12, width: 1, color: .black.withAlphaComponent(0.2))
-        }
-    }
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var demonView: DemonView!
     
     var deamon: Deamon! {
         didSet {
-            nameLabel.text = deamon.name
+            demonView.deamon = deamon
         }
     }
 }
