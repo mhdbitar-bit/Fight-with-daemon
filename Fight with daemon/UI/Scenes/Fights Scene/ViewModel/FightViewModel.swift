@@ -20,29 +20,20 @@ final class FightViewModel {
     
     public func fight() -> Result {
         var state: Result.FightSate = .Lose
-        let weaponPowers = weapons.compactMap { $0.power }
-        if weaponPowers.hasCommonElements(with: demon.powers) {
+        let weaponPowers = NSSet(array: weapons.compactMap { $0.power })
+        let demonPowers = NSSet(array: demon.powers)
+        
+        
+        if weaponPowers == demonPowers {
+            state = .Win
+        } else if weaponPowers.isSubset(of: demonPowers as! Set<AnyHashable>) {
+            state = .Win
+        } else if demonPowers.isSubset(of: weaponPowers as! Set<AnyHashable>) {
             state = .Win
         } else {
             state = .Lose
         }
         
         return Result(weapons: weapons, demon: demon, state: state)
-    }
-}
-
-private extension Array where Element: Hashable {
-
-    func set() -> Set<Array.Element> {
-        return Set(self)
-    }
-    
-    func commonElements(between array: Array) -> Array {
-        let intersection = self.set().intersection(array.set())
-        return intersection.map({ $0 })
-    }
-
-    func hasCommonElements(with array: Array) -> Bool {
-        return self.commonElements(between: array).count >= 1 ? true : false
     }
 }
