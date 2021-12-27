@@ -49,6 +49,10 @@ extension BattlePreperationFlowViewController: GameFlowViewDelegate {
     
     func didReceiveDeamons(demons: [Deamon]) {
         self.demons = demons
+        startBattle(demons)
+    }
+    
+    private func startBattle(_ demons: [Deamon]) {
         let factory = BattleViewControllerFactory()
         let router = BattleNavigationControllerRouter(navigationController: navigationController ?? UINavigationController(), factory: factory)
         let game = Game(weapons: weapons, demons: demons, amount: amount)
